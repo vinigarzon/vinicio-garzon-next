@@ -5,18 +5,28 @@
       "title": "Lincoln BizLab",
       "category": "Training & Development Initiative",
       "description": "A hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois.",
-      "image": "https://lincolnbizlab.com/wp-content/uploads/2024/10/bizlab-cover.jpg",
-      "thumbnail": "https://lincolnbizlab.com/wp-content/uploads/2024/10/bizlab-cover.jpg",
+      "image": "/images/lincoln-bizlab-building.png",
+      "thumbnail": "/images/lincoln-bizlab-building.png",
       "tags": ["Training Center", "Business Development", "Community Initiative"],
       "client": "Lincoln, Illinois",
       "year": "2024",
-      "deliverables": ["Hybrid Training Programs", "Business Development Resources", "Community Engagement"],
+      "deliverables": ["Hybrid Training Programs", "Business Development Resources", "Community Engagement Initiatives"],
       "achievements": ["Supporting Local Business Growth", "Bridging Academic and Practical Training", "Regional Economic Initiative"],
-      "fullDescription": "Lincoln BizLab is a hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois. The project combines structured training, business development resources, and community-oriented programs to support local economic activity. More information is available at lincolnbizlab.com.",
+      "fullDescription": "Lincoln BizLab is a hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois. The project combines structured training programs, business development resources, and community-oriented activities to support local economic activity. More information is available at lincolnbizlab.com.",
       "website": "https://lincolnbizlab.com/",
-      "services": [],
-      "gallery": [],
-      "testimonials": []
+      "services": [
+        {"title": "Program Development", "description": "Design of hybrid training programs combining in-person sessions and digital learning resources."},
+        {"title": "Community Partnerships", "description": "Coordination with local organizations and stakeholders to align the initiative with regional needs."},
+        {"title": "Digital Infrastructure", "description": "Implementation of digital platforms and tools that support program delivery, tracking, and engagement."}
+      ],
+      "gallery": [
+        "/images/lincoln-bizlab-building.png"
+      ],
+      "testimonials": [
+        {"quote": "Lincoln BizLab represents a thoughtful approach to local economic development, combining practical training with community engagement.", "author": "Community Partner", "role": "Lincoln, Illinois"},
+        {"quote": "The hybrid model makes the program accessible to a wider range of participants without compromising quality.", "author": "Program Participant", "role": ""},
+        {"quote": "A useful reference for how small-scale initiatives can bridge academic training and real business development.", "author": "Regional Observer", "role": ""}
+      ]
     },
     {
       "id": "fans",

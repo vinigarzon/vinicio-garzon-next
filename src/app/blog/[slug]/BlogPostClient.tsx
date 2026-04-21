@@ -116,7 +116,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
                         <img
                           src={relatedPost.image}
                           alt={relatedPost.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter"
                         />
                       </div>
                       <div className="p-6">

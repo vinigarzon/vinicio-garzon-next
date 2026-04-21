@@ -54,7 +54,7 @@ export default function PortfolioDetailClient({ id }: { id: string }) {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light">
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover editorial-filter" />
             </div>
           </Reveal>
         </div>
@@ -219,7 +219,7 @@ export default function PortfolioDetailClient({ id }: { id: string }) {
               <Reveal key={p.id} delay={idx * 80}>
                 <Link href={`/portfolio/${p.id}`} className="block group">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-primary border border-border group-hover:border-accent transition mb-3">
-                    <img src={p.thumbnail} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={p.thumbnail} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter" />
                   </div>
                   <h4 className="font-display font-bold text-sm group-hover:text-accent transition">{p.title}</h4>
                   <p className="text-text-muted text-xs uppercase tracking-wider mt-1">{p.category}</p>

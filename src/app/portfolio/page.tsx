@@ -36,7 +36,7 @@ export default function PortfolioPage() {
               <Reveal key={project.id} delay={(idx % 3) * 80}>
                 <Link href={`/portfolio/${project.id}`} className="block group">
                   <div className="portfolio-card">
-                    <img src={project.thumbnail} alt={project.title} className="portfolio-card-image" />
+                    <img src={project.thumbnail} alt={project.title} className="portfolio-card-image editorial-filter" />
                     <div className="portfolio-card-overlay">
                       <p className="text-xs uppercase tracking-widest text-accent mb-2">{project.category}</p>
                       <h3 className="text-2xl font-display font-bold mb-3">{project.title}</h3>

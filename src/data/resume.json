@@ -45,6 +45,13 @@
       "title": "Master's in Commercial and Marketing Management",
       "institution": "Universitat de Barcelona, Spain",
       "description": "Graduate program specialized in commercial and marketing management, with emphasis on market strategy and consumer behavior."
+    },
+    {
+      "number": "3",
+      "period": "1994 - 1999",
+      "title": "Bachelor's in Business Administration",
+      "institution": "Escuela Politécnica del Ejército (ESPE), Ecuador",
+      "description": "Undergraduate degree in Business Administration, with foundational training in management, finance, marketing, and organizational strategy."
     }
   ],
   "additionalTraining": [
@@ -58,52 +65,66 @@
   ],
   "skills": [
     {"name": "PHOTOSHOP", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/photoshop.png"},
+    {"name": "ILLUSTRATOR", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"},
+    {"name": "INDESIGN", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Adobe_InDesign_CC_icon.svg"},
     {"name": "WORDPRESS", "percentage": 98, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/wordpress.png"},
-    {"name": "CAPCUT", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CAPCUT.png"},
     {"name": "ELEMENTOR", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/elementor.png"},
-    {"name": "HUBSPOT", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/HUBSPOT-LOGO.png"},
-    {"name": "GOOGLE ANALYTICS", "percentage": 92, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/GOOGLE.png"},
     {"name": "WOOCOMMERCE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/woocommerce.png"},
-    {"name": "MAILCHIMP", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/MAILCHIMP.png"},
-    {"name": "META BUSINESS SUITE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/META.png"},
+    {"name": "CAPCUT", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CAPCUT.png"},
     {"name": "CANVA", "percentage": 93, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CANVA-LOGO.png"},
+    {"name": "HUBSPOT", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/HUBSPOT-LOGO.png"},
+    {"name": "MAILCHIMP", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/MAILCHIMP.png"},
+    {"name": "GOOGLE ANALYTICS", "percentage": 92, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/GOOGLE.png"},
+    {"name": "META BUSINESS SUITE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/META.png"},
     {"name": "TIKTOK", "percentage": 82, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/TIKTOK-LOGO.png"},
     {"name": "STRIPE", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/STRIPE.png"},
     {"name": "TUTOR LMS", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/tutorlms.png"},
     {"name": "GAMIPRESS", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/GamiPress.png"},
     {"name": "ZAPIER", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/ZAPIER.png"},
-    {"name": "TRELLO", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/TRELLO.png"}
+    {"name": "TRELLO", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/TRELLO.png"},
+    {"name": "GITHUB", "percentage": 90, "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"},
+    {"name": "NETLIFY", "percentage": 85, "icon": "https://www.netlify.com/v3/img/components/logomark.png"},
+    {"name": "LOVABLE", "percentage": 95, "icon": "https://lovable.dev/favicon.ico"},
+    {"name": "CLAUDE", "percentage": 90, "icon": "https://claude.ai/favicon.ico"},
+    {"name": "CHATGPT", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"},
+    {"name": "GEMINI", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"}
   ],
   "services": [
     {
       "number": "01",
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/loyalty.png",
+      "iconType": "loyalty",
       "title": "Loyalty Programs",
       "description": "Experience designing and implementing loyalty programs focused on customer retention and long-term engagement."
     },
     {
       "number": "02",
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/customer.png",
+      "iconType": "engagement",
       "title": "Customer Engagement",
       "description": "Work in data-informed strategies that support meaningful relationships between brands and their audiences."
     },
     {
       "number": "03",
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/advertising.png",
+      "iconType": "education",
       "title": "E-Learning & Education",
       "description": "Development of educational platforms and structured learning resources for entrepreneurs and small organizations."
     },
     {
       "number": "04",
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/growth.png",
+      "iconType": "growth",
       "title": "Organizational Growth",
       "description": "Applied experience in growth initiatives across Latin America, combining strategy, operations, and execution."
     },
     {
       "number": "05",
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/strategic.png",
+      "iconType": "partnership",
       "title": "Strategic Partnerships",
       "description": "Development of partnerships and collaborative initiatives that extend reach and create shared value across sectors."
+    },
+    {
+      "number": "06",
+      "iconType": "digital",
+      "title": "Digital Transformation",
+      "description": "Implementation of digital tools, platforms, and workflows that modernize operations and expand organizational capabilities."
     }
   ],
   "stats": [

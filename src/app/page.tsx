@@ -8,6 +8,7 @@ import resume from '@/data/resume.json';
 import Reveal from '@/components/Reveal';
 import Marquee from '@/components/Marquee';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import ServiceIcon from '@/components/ServiceIcon';
 
 const AnimatedCounter = dynamic(() => import('@/components/AnimatedCounter'), { ssr: false });
 const SkillBar = dynamic(() => import('@/components/SkillBar'), { ssr: false });
@@ -25,15 +26,16 @@ export default function Home() {
         <div className="noise-overlay" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-8">
+          <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Text column */}
+            <div className="md:col-span-7">
               <Reveal>
                 <p className="section-label">Personal & Professional Profile</p>
               </Reveal>
 
               <Reveal delay={100}>
                 <h1 className="mb-6">
-                  Vinicio <span className="text-accent">Garzón</span>
+                  Vinicio <span className="text-accent">Garzón</span> Castrillón
                 </h1>
               </Reveal>
 
@@ -44,7 +46,7 @@ export default function Home() {
               </Reveal>
 
               <Reveal delay={300}>
-                <div className="flex flex-wrap gap-4 mb-12">
+                <div className="flex flex-wrap gap-4 mb-8">
                   <a href="#about-me" className="btn-primary">
                     Learn More
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,35 +58,31 @@ export default function Home() {
                   </a>
                 </div>
               </Reveal>
-            </div>
 
-            <div className="md:col-span-4">
               <Reveal delay={400}>
-                <div className="card bg-secondary-light border border-border p-8">
-                  <h3 className="text-2xl font-display font-bold mb-4">
-                    <span className="text-accent">Current</span> Focus
-                  </h3>
-                  <p className="text-text-muted text-sm mb-6 leading-relaxed">
-                    Active academic path in Sport Management, alongside ongoing professional projects in Latin America and the United States.
-                  </p>
-                  <p className="text-text-muted text-xs uppercase tracking-widest mb-2">
-                    Contact
-                  </p>
-                  <a
-                    href="mailto:yo@viniciogarzon.com"
-                    className="text-text hover:text-accent transition text-base font-medium block break-all"
-                  >
-                    yo@viniciogarzon.com
-                  </a>
+                <div className="flex items-center gap-6 text-sm text-text-muted pt-4 border-t border-border max-w-md">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest mb-1">Contact</p>
+                    <a href="mailto:yo@viniciogarzon.com" className="text-text hover:text-accent transition">
+                      yo@viniciogarzon.com
+                    </a>
+                  </div>
+                  <div className="border-l border-border pl-6">
+                    <p className="text-xs uppercase tracking-widest mb-1">Location</p>
+                    <p className="text-text">Naperville, USA</p>
+                  </div>
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 rounded-full border-2 border-text-muted flex justify-center p-1.5">
-            <div className="w-1 h-2 bg-accent rounded-full" />
+            {/* Portrait column */}
+            <div className="md:col-span-5">
+              <Reveal delay={200}>
+                <div className="hero-portrait aspect-[4/5] max-w-md mx-auto md:ml-auto md:mr-0">
+                  <img src="/images/vinicio-portrait.jpg" alt="Vinicio Garzón Castrillón" />
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -128,11 +126,11 @@ export default function Home() {
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                   <img
                     src="https://www.viniciogarzon.com/wp-content/uploads/2025/01/naperville.jpg"
-                    alt="Vinicio Garzón in Naperville"
-                    className="w-full h-full object-cover"
+                    alt="Naperville"
+                    className="w-full h-full object-cover editorial-filter"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 z-10">
                     <p className="text-xs uppercase tracking-widest text-accent mb-2">Based in</p>
                     <p className="text-2xl font-display font-bold">Naperville, USA</p>
                     <p className="text-sm text-text-muted mt-1">Latin America · United States</p>
@@ -170,8 +168,8 @@ export default function Home() {
               <Reveal key={service.number} delay={idx * 80}>
                 <div className="card group h-full hover:bg-secondary-light">
                   <div className="flex justify-between items-start mb-6">
-                    <div className="w-16 h-16 rounded-xl bg-primary border border-border p-3 group-hover:border-accent transition">
-                      <img src={service.icon} alt={service.title} className="w-full h-full object-contain" />
+                    <div className="w-16 h-16 rounded-xl bg-primary border border-border flex items-center justify-center text-accent group-hover:border-accent transition">
+                      <ServiceIcon type={service.iconType} className="w-8 h-8" />
                     </div>
                     <span className="text-5xl font-display font-bold text-accent/20 group-hover:text-accent/60 transition">
                       {service.number}
@@ -254,7 +252,7 @@ export default function Home() {
                     <img
                       src={project.thumbnail}
                       alt={project.title}
-                      className="portfolio-card-image"
+                      className="portfolio-card-image editorial-filter"
                     />
                     <div className="portfolio-card-overlay">
                       <p className="text-xs uppercase tracking-widest text-accent mb-2">
@@ -469,7 +467,7 @@ export default function Home() {
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter"
                       />
                     </div>
                     <div className="p-6">
@@ -508,7 +506,7 @@ export default function Home() {
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter"
                         />
                       </div>
                       <div className="p-6 sm:w-3/5">
