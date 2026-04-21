@@ -1,0 +1,123 @@
+{
+  "portfolio": [
+    {
+      "id": "fans",
+      "title": "DirecTV Fans",
+      "category": "Loyalty Platform",
+      "description": "Loyalty program designed to enhance customer engagement and retention.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/dish-techo-638x638.png",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/dish-techo-388x388.png",
+      "tags": ["Loyalty Platform", "Data-Driven", "Rewards System"],
+      "client": "DirecTV",
+      "year": "2014",
+      "deliverables": ["Customer Loyalty Platform", "Personalized Rewards System", "Data-Driven Insights"],
+      "achievements": ["Higher Engagement", "Stronger Loyalty", "Data Personalization"],
+      "fullDescription": "Vinicio led the successful implementation of DirecTV Fans, a loyalty program designed to enhance customer engagement and retention. By integrating gamification and personalized rewards, the program significantly increased fan interaction and brand loyalty. Customers enjoyed exclusive experiences, benefits, and personalized offers, leading to a substantial boost in brand affinity and repeat subscriptions.",
+      "services": [
+        {"title": "Loyalty Program Leadership", "description": "Directed the creation of a tailored rewards system to drive customer retention."},
+        {"title": "Data-Driven Personalization", "description": "Leveraged analytics to customize offers and enhance user experience."},
+        {"title": "Gamification Strategies", "description": "Implemented interactive elements to boost engagement and strengthen brand loyalty."}
+      ],
+      "gallery": [
+        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/directv.png",
+        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/laptop.png",
+        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/2x1fans.png",
+        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/tv-control.png"
+      ],
+      "testimonials": [
+        {"quote": "Loyalty isn't just about points and rewards; it's about creating meaningful connections that turn customers into lifelong advocates.", "author": "Vinicio Garzón", "role": "CEO Zegendia"},
+        {"quote": "The DirecTV Fans program redefined how we connect with our audience. Thanks to Vinicio's leadership, we transformed customer engagement into a dynamic and rewarding experience.", "author": "DirecTV Fans", "role": ""},
+        {"quote": "Vinicio's vision and strategic approach helped us unlock the true potential of loyalty programs. The data-driven insights provided a new level of personalization that resonated with our customers.", "author": "DirecTV", "role": ""}
+      ]
+    },
+    {
+      "id": "gurumba",
+      "title": "Gurumba",
+      "category": "E-Learning Platform",
+      "description": "An innovative e-learning platform empowering entrepreneurs and small businesses.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/gurumba-638x638.png",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/gurumba-388x388.png",
+      "tags": ["E-Learning", "Entrepreneurship", "Education"],
+      "client": "Gurumba.com",
+      "year": "2022",
+      "deliverables": ["E-Learning Platform", "Course Management System", "Community Features"],
+      "achievements": ["Empowering Entrepreneurs", "Transformative Education", "Innovative Learning Solutions"],
+      "fullDescription": "Leading Gurumba.com, an e-learning platform dedicated to empowering entrepreneurs and small businesses in Latin America. The platform provides the tools and knowledge necessary for leaders to innovate and achieve success.",
+      "services": [
+        {"title": "Platform Development", "description": "Built a comprehensive e-learning ecosystem for Latin American entrepreneurs."},
+        {"title": "Content Strategy", "description": "Curated educational content tailored to small business needs."},
+        {"title": "Community Building", "description": "Fostered a vibrant community of learners and mentors."}
+      ],
+      "gallery": [],
+      "testimonials": []
+    },
+    {
+      "id": "programas",
+      "title": "PrograMAS",
+      "category": "Fulfillment",
+      "description": "A comprehensive fulfillment solution for loyalty and rewards programs.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/programas-638x638.jpg",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/programas-388x388.jpg",
+      "tags": ["Fulfillment", "Rewards Distribution", "Logistics"],
+      "client": "Multiple Clients",
+      "year": "2020",
+      "deliverables": ["Fulfillment Platform", "Logistics Management", "Reward Distribution System"],
+      "achievements": ["Efficient Distribution", "Customer Satisfaction", "Scalable Solutions"],
+      "fullDescription": "PrograMAS is a fulfillment platform designed to efficiently distribute rewards and manage logistics across Latin America.",
+      "services": [],
+      "gallery": [],
+      "testimonials": []
+    },
+    {
+      "id": "comercio",
+      "title": "Diario El Comercio",
+      "category": "Rewards Club",
+      "description": "A rewards program for one of Ecuador's leading newspapers.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/comercio-638x638.jpg",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/comercio-388x388.jpg",
+      "tags": ["Rewards Club", "Media", "Customer Retention"],
+      "client": "Diario El Comercio",
+      "year": "2018",
+      "deliverables": ["Rewards Club Platform", "Subscriber Benefits System", "Digital Engagement Tools"],
+      "achievements": ["Increased Subscriptions", "Higher Engagement", "Reader Loyalty"],
+      "fullDescription": "A comprehensive rewards club designed to enhance reader loyalty and drive subscription growth for Ecuador's premier newspaper.",
+      "services": [],
+      "gallery": [],
+      "testimonials": []
+    },
+    {
+      "id": "cebichomano",
+      "title": "Cebichomano",
+      "category": "Loyalty System",
+      "description": "A loyalty system for a popular restaurant chain across Latin America.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/cebichomano-638x638.png",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/cebichomano-388x388.png",
+      "tags": ["Food & Beverage", "Loyalty", "Customer Experience"],
+      "client": "Cebichomano",
+      "year": "2019",
+      "deliverables": ["Loyalty System", "Customer Experience Design", "Mobile Integration"],
+      "achievements": ["Repeat Visits", "Customer Lifetime Value", "Brand Advocacy"],
+      "fullDescription": "A sophisticated loyalty system designed to drive repeat visits and increase customer lifetime value for a successful restaurant brand.",
+      "services": [],
+      "gallery": [],
+      "testimonials": []
+    },
+    {
+      "id": "tarjetagpf",
+      "title": "Tarjeta GPF",
+      "category": "Employees Rewards",
+      "description": "An employee rewards program with exclusive benefits.",
+      "image": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/tarjtagpf-638x638.png",
+      "thumbnail": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/tarjtagpf-388x388.png",
+      "tags": ["Employee Benefits", "Rewards", "Corporate"],
+      "client": "Tarjeta GPF",
+      "year": "2017",
+      "deliverables": ["Employee Rewards Platform", "Benefits Management", "Card System Integration"],
+      "achievements": ["Employee Satisfaction", "Program Adoption", "Financial Inclusion"],
+      "fullDescription": "A comprehensive employee rewards program that provides members with exclusive benefits and rewards.",
+      "services": [],
+      "gallery": [],
+      "testimonials": []
+    }
+  ]
+}

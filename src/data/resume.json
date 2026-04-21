@@ -1,0 +1,113 @@
+{
+  "experience": [
+    {
+      "number": "1",
+      "period": "2022 - now",
+      "title": "Founder & Owner",
+      "company": "Gurumba.com",
+      "description": "Leading Gurumba.com, an e-learning platform dedicated to empowering entrepreneurs and small businesses in Latin America. Our mission is to provide the tools and knowledge necessary for leaders to innovate and achieve success."
+    },
+    {
+      "number": "2",
+      "period": "2006 - 2022",
+      "title": "Founder & CEO",
+      "company": "Zegendia",
+      "description": "Led Zegendia, a company specializing in loyalty and rewards programs across Latin America. Focused on creating innovative strategies to enhance customer engagement and foster long-term brand loyalty."
+    },
+    {
+      "number": "3",
+      "period": "2003 - 2005",
+      "title": "National Sales Manager",
+      "company": "ANETA (Automóvil Club del Ecuador)",
+      "description": "Managed nationwide sales operations, developing strategies that increased membership and improved customer satisfaction. Implemented programs to enhance member benefits and services."
+    }
+  ],
+  "education": [
+    {
+      "number": "1",
+      "period": "2019 - 2020",
+      "title": "Master of Business Administration (MBA)",
+      "institution": "INCAE Business School, Costa Rica",
+      "description": "One of the top business schools in Latin America. Focused on strategic management, leadership, and business innovation."
+    },
+    {
+      "number": "2",
+      "period": "2004 - 2005",
+      "title": "Master's in Commercial and Marketing Management",
+      "institution": "Universitat de Barcelona, Spain",
+      "description": "Completed a master's degree specializing in commercial and marketing management, gaining expertise in market strategies and consumer behavior."
+    },
+    {
+      "number": "3",
+      "period": "2024 - 2025",
+      "title": "Intensive English Program",
+      "institution": "North Central College, USA",
+      "description": "Intensive English program to enhance communication skills and strengthen professional opportunities in an international environment."
+    }
+  ],
+  "skills": [
+    {"name": "PHOTOSHOP", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/photoshop.png"},
+    {"name": "WORDPRESS", "percentage": 98, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/wordpress.png"},
+    {"name": "CAPCUT", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CAPCUT.png"},
+    {"name": "ELEMENTOR", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/elementor.png"},
+    {"name": "HUBSPOT", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/HUBSPOT-LOGO.png"},
+    {"name": "GOOGLE ANALYTICS", "percentage": 92, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/GOOGLE.png"},
+    {"name": "WOOCOMMERCE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/woocommerce.png"},
+    {"name": "MAILCHIMP", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/MAILCHIMP.png"},
+    {"name": "META BUSINESS SUITE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/META.png"},
+    {"name": "CANVA", "percentage": 93, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CANVA-LOGO.png"},
+    {"name": "TIKTOK", "percentage": 82, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/TIKTOK-LOGO.png"},
+    {"name": "STRIPE", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/STRIPE.png"},
+    {"name": "TUTOR LMS", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/tutorlms.png"},
+    {"name": "GAMIPRESS", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/GamiPress.png"},
+    {"name": "ZAPIER", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/ZAPIER.png"},
+    {"name": "TRELLO", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/TRELLO.png"}
+  ],
+  "services": [
+    {
+      "number": "01",
+      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/loyalty.png",
+      "title": "Loyalty Program Development",
+      "description": "Design and implement loyalty programs that drive customer retention and increase lifetime value."
+    },
+    {
+      "number": "02",
+      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/customer.png",
+      "title": "Customer Engagement Strategies",
+      "description": "Create data-driven strategies that foster meaningful connections and enhance brand loyalty."
+    },
+    {
+      "number": "03",
+      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/advertising.png",
+      "title": "E-Learning & Education",
+      "description": "Develop transformative educational solutions that empower individuals and organizations."
+    },
+    {
+      "number": "04",
+      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/growth.png",
+      "title": "Growth Partnership",
+      "description": "Partner with your business to unlock sustainable growth through strategic innovation."
+    },
+    {
+      "number": "05",
+      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/strategic.png",
+      "title": "Strategic Partnerships",
+      "description": "Build and leverage partnerships that create new opportunities and expand market reach."
+    }
+  ],
+  "stats": [
+    {"number": 20, "suffix": "+", "label": "Years of Experience"},
+    {"number": 100, "suffix": "+", "label": "Successful Companies"},
+    {"number": 1, "suffix": "M+", "label": "Satisfied Customers"},
+    {"number": 2, "suffix": "", "label": "Prestigious Degrees"}
+  ],
+  "testimonials": [
+    {"text": "Working with Vinicio has been a game-changer for our business. His deep understanding of loyalty programs helped us create a strategy that not only increased customer retention but also significantly boosted our revenue. His insights are invaluable.", "author": "Andrea López"},
+    {"text": "Vinicio's approach to customer engagement is truly innovative. He helped us connect with our audience in ways we never imagined, leading to stronger relationships and increased brand loyalty.", "author": "Carlos Jimenez"},
+    {"text": "As a growth partner, Vinicio has provided us with the strategic vision and practical solutions needed to expand our business across Latin America. His expertise has been instrumental in our success.", "author": "Sofía Martínez"},
+    {"text": "Vinicio's data-driven approach allowed us to fine-tune our loyalty program, resulting in a 30% increase in customer engagement. His ability to translate data into actionable strategies is exceptional.", "author": "Javier Torres"},
+    {"text": "Vinicio has an incredible talent for building strategic partnerships that drive growth and create long-term value. Thanks to his network and expertise, we've expanded into new markets effortlessly.", "author": "Luis Rodríguez"},
+    {"text": "Vinicio is more than a consultant; he's a true partner who genuinely cares about our success. His passion and commitment have made a lasting impact on our business and our team.", "author": "Mariana Fernández"}
+  ],
+  "values": ["Strategic", "Innovative", "Data-Driven", "Customer-Focused", "Growth-Oriented", "Tech-Savvy", "Results-Driven", "Visionary"]
+}
