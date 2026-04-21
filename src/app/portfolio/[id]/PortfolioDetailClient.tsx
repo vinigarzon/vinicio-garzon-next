@@ -105,11 +105,11 @@ export default function PortfolioDetailClient({ id }: { id: string }) {
         <section className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-secondary border-y border-border">
           <div className="max-w-7xl mx-auto">
             <Reveal>
-              <p className="section-label">What I Do</p>
+              <p className="section-label">Scope of Work</p>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="max-w-3xl mb-16">
-                Where Strategy Meets Innovation, and Every Interaction Builds Lasting <span className="text-accent">Loyalty</span>.
+                Areas of <span className="text-accent">involvement</span> in this project.
               </h2>
             </Reveal>
 

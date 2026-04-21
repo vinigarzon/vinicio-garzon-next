@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 const NAV_LINKS = [
   { label: 'Home', href: '/#home' },
-  { label: 'About me', href: '/#about-me' },
-  { label: 'What I Do', href: '/#what-i-do' },
-  { label: 'Portfolio', href: '/#portfolio' },
-  { label: 'My Resume', href: '/#my-resume' },
-  { label: 'Blog', href: '/#blog' },
-  { label: 'Contact Me', href: '/#contact' },
+  { label: 'About', href: '/#about-me' },
+  { label: 'Experience', href: '/#what-i-do' },
+  { label: 'Projects', href: '/#portfolio' },
+  { label: 'Resume', href: '/#my-resume' },
+  { label: 'Writings', href: '/#blog' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -27,7 +27,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-text-muted text-base max-w-sm leading-relaxed mb-6">
-              Expert in loyalty, rewards, and e-learning driving growth and connections across Latin America.
+              Personal and professional profile. Background in loyalty, rewards, and e-learning across Latin America. Currently pursuing academic studies in Sport Management.
             </p>
             <a
               href="mailto:yo@viniciogarzon.com"
@@ -62,16 +62,16 @@ export default function Footer() {
           {/* CTA */}
           <div className="md:col-span-3">
             <h4 className="text-text font-display font-semibold text-sm uppercase tracking-widest mb-5">
-              Let's Connect
+              Contact
             </h4>
             <p className="text-text-muted text-sm mb-5 leading-relaxed">
-              Serving all of Latin America
+              Naperville, USA
             </p>
             <a
               href="mailto:yo@viniciogarzon.com"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-primary rounded-full font-semibold text-sm hover:bg-accent-dark transition-all hover:scale-105"
             >
-              Get in Touch
+              Send Email
             </a>
           </div>
         </div>

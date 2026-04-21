@@ -83,14 +83,14 @@ export default function BlogPostClient({ slug }: { slug: string }) {
           <Reveal>
             <div className="mt-16 pt-12 border-t border-border text-center">
               <h3 className="text-2xl font-display font-bold mb-4">
-                Let's Discuss This <span className="text-accent">Further</span>
+                Continue <span className="text-accent">Reading</span>
               </h3>
               <p className="text-text-muted mb-8 max-w-xl mx-auto">
-                Have thoughts on this topic? Let's connect and explore how these strategies can benefit your business.
+                Explore additional writings on related topics.
               </p>
-              <a href="mailto:yo@viniciogarzon.com" className="btn-primary">
-                Get In Touch
-              </a>
+              <Link href="/blog" className="btn-outline inline-block">
+                View All Articles
+              </Link>
             </div>
           </Reveal>
         </div>

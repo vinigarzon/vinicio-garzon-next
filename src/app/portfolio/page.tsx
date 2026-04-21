@@ -13,16 +13,16 @@ export default function PortfolioPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <Reveal>
-            <p className="section-label">My Works</p>
+            <p className="section-label">Selected Projects</p>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="mb-6">
-              Growth Through <span className="text-accent">Loyalty</span> & Learning
+              Work in <span className="text-accent">loyalty</span>, learning, and development
             </h1>
           </Reveal>
           <Reveal delay={200}>
             <p className="text-xl text-text-muted max-w-3xl leading-relaxed">
-              A showcase of successful loyalty programs, e-learning platforms, and growth partnerships across Latin America.
+              A selection of projects developed across Latin America and the United States in the areas of loyalty programs, e-learning, and business development initiatives.
             </p>
           </Reveal>
         </div>
@@ -64,26 +64,21 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Info block */}
       <section className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
           <Reveal>
-            <h2 className="mb-6">
-              Ready to Create Your <span className="text-accent">Success Story</span>?
-            </h2>
+            <p className="section-label justify-center">About This Page</p>
           </Reveal>
           <Reveal delay={100}>
-            <p className="text-text-muted text-lg mb-10 max-w-2xl mx-auto">
-              Let's discuss how we can build a loyalty program or growth strategy that drives real results.
-            </p>
+            <h2 className="mb-6">
+              A reference of <span className="text-accent">selected work</span>.
+            </h2>
           </Reveal>
           <Reveal delay={200}>
-            <a href="mailto:yo@viniciogarzon.com" className="btn-primary">
-              Start a Project
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+            <p className="text-text-muted text-lg max-w-2xl mx-auto">
+              The projects listed here reflect areas of applied experience in loyalty programs, e-learning, and business development. For additional information, see the individual project pages.
+            </p>
           </Reveal>
         </div>
       </section>

@@ -2,24 +2,33 @@
   "experience": [
     {
       "number": "1",
-      "period": "2022 - now",
+      "period": "2022 - Now",
       "title": "Founder",
       "company": "Gurumba.com",
-      "description": "Leading Gurumba.com, an e-learning platform dedicated to empowering entrepreneurs and small businesses in Latin America. Our mission is to provide the tools and knowledge necessary for leaders to innovate and achieve success."
+      "description": "Founded and currently lead Gurumba.com, an e-learning platform focused on supporting entrepreneurs and small businesses in Latin America through structured educational content and practical training resources."
     },
     {
       "number": "2",
       "period": "2006 - 2022",
       "title": "Founder & CEO",
       "company": "Zegendia",
-      "description": "Led Zegendia, a company specializing in loyalty and rewards programs across Latin America. Focused on creating innovative strategies to enhance customer engagement and foster long-term brand loyalty."
+      "description": "Led Zegendia, a company specialized in loyalty and rewards programs across Latin America, overseeing strategy, operations, and long-term client engagement initiatives."
     },
     {
       "number": "3",
       "period": "2003 - 2005",
       "title": "National Sales Manager",
       "company": "ANETA (Automóvil Club del Ecuador)",
-      "description": "Managed nationwide sales operations, developing strategies that increased membership and improved customer satisfaction. Implemented programs to enhance member benefits and services."
+      "description": "Managed nationwide sales operations, coordinating member-related programs and service strategies across a national network."
+    }
+  ],
+  "currentStudies": [
+    {
+      "number": "1",
+      "period": "2026 - Now",
+      "title": "Bachelor of Arts in Sport Management",
+      "institution": "North Central College, USA",
+      "description": "Currently pursuing a Bachelor of Arts in Sport Management, expanding formal training in sports management, organizational strategy, marketing, operations, and the broader business side of sports."
     }
   ],
   "education": [
@@ -28,21 +37,23 @@
       "period": "2019 - 2020",
       "title": "Master of Business Administration (MBA)",
       "institution": "INCAE Business School, Costa Rica",
-      "description": "One of the top business schools in Latin America. Focused on strategic management, leadership, and business innovation."
+      "description": "One of the leading business schools in Latin America. Coursework focused on strategic management, leadership, and organizational innovation."
     },
     {
       "number": "2",
       "period": "2004 - 2005",
       "title": "Master's in Commercial and Marketing Management",
       "institution": "Universitat de Barcelona, Spain",
-      "description": "Completed a master's degree specializing in commercial and marketing management, gaining expertise in market strategies and consumer behavior."
-    },
+      "description": "Graduate program specialized in commercial and marketing management, with emphasis on market strategy and consumer behavior."
+    }
+  ],
+  "additionalTraining": [
     {
-      "number": "3",
+      "number": "1",
       "period": "2024 - 2025",
       "title": "Intensive English Program",
       "institution": "North Central College, USA",
-      "description": "Intensive English program to enhance communication skills and strengthen professional opportunities in an international environment."
+      "description": "Academic English program to strengthen communication skills within an international environment."
     }
   ],
   "skills": [
@@ -67,47 +78,47 @@
     {
       "number": "01",
       "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/loyalty.png",
-      "title": "Loyalty Program Development",
-      "description": "Design and implement loyalty programs that drive customer retention and increase lifetime value."
+      "title": "Loyalty Programs",
+      "description": "Experience designing and implementing loyalty programs focused on customer retention and long-term engagement."
     },
     {
       "number": "02",
       "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/customer.png",
-      "title": "Customer Engagement Strategies",
-      "description": "Create data-driven strategies that foster meaningful connections and enhance brand loyalty."
+      "title": "Customer Engagement",
+      "description": "Work in data-informed strategies that support meaningful relationships between brands and their audiences."
     },
     {
       "number": "03",
       "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/advertising.png",
       "title": "E-Learning & Education",
-      "description": "Develop transformative educational solutions that empower individuals and organizations."
+      "description": "Development of educational platforms and structured learning resources for entrepreneurs and small organizations."
     },
     {
       "number": "04",
       "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/growth.png",
-      "title": "Growth Partnership",
-      "description": "Partner with your business to unlock sustainable growth through strategic innovation."
+      "title": "Organizational Growth",
+      "description": "Applied experience in growth initiatives across Latin America, combining strategy, operations, and execution."
     },
     {
       "number": "05",
       "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/strategic.png",
       "title": "Strategic Partnerships",
-      "description": "Build and leverage partnerships that create new opportunities and expand market reach."
+      "description": "Development of partnerships and collaborative initiatives that extend reach and create shared value across sectors."
     }
   ],
   "stats": [
     {"number": 20, "suffix": "+", "label": "Years of Experience"},
-    {"number": 100, "suffix": "+", "label": "Successful Companies"},
-    {"number": 1, "suffix": "M+", "label": "Satisfied Customers"},
-    {"number": 2, "suffix": "", "label": "Prestigious Degrees"}
+    {"number": 100, "suffix": "+", "label": "Projects Delivered"},
+    {"number": 2000, "suffix": "+", "label": "Customers Served"},
+    {"number": 3, "suffix": "", "label": "Degrees"}
   ],
   "testimonials": [
-    {"text": "Working with Vinicio has been a game-changer for our business. His deep understanding of loyalty programs helped us create a strategy that not only increased customer retention but also significantly boosted our revenue. His insights are invaluable.", "author": "Andrea López"},
-    {"text": "Vinicio's approach to customer engagement is truly innovative. He helped us connect with our audience in ways we never imagined, leading to stronger relationships and increased brand loyalty.", "author": "Carlos Jimenez"},
-    {"text": "As a growth partner, Vinicio has provided us with the strategic vision and practical solutions needed to expand our business across Latin America. His expertise has been instrumental in our success.", "author": "Sofía Martínez"},
-    {"text": "Vinicio's data-driven approach allowed us to fine-tune our loyalty program, resulting in a 30% increase in customer engagement. His ability to translate data into actionable strategies is exceptional.", "author": "Javier Torres"},
-    {"text": "Vinicio has an incredible talent for building strategic partnerships that drive growth and create long-term value. Thanks to his network and expertise, we've expanded into new markets effortlessly.", "author": "Luis Rodríguez"},
-    {"text": "Vinicio is more than a consultant; he's a true partner who genuinely cares about our success. His passion and commitment have made a lasting impact on our business and our team.", "author": "Mariana Fernández"}
+    {"text": "Vinicio brings a rigorous and thoughtful approach to loyalty program design. His work consistently emphasizes long-term value over short-term metrics.", "author": "Andrea López"},
+    {"text": "Working alongside Vinicio means working with someone who understands both the strategic and operational layers of customer engagement.", "author": "Carlos Jimenez"},
+    {"text": "Vinicio's experience across Latin America is evident in the way he frames growth challenges with cultural and contextual nuance.", "author": "Sofía Martínez"},
+    {"text": "His data-informed perspective turned abstract discussions about loyalty into concrete, measurable decisions.", "author": "Javier Torres"},
+    {"text": "Vinicio's background in building partnerships across markets adds clear perspective to strategic conversations.", "author": "Luis Rodríguez"},
+    {"text": "Beyond his professional expertise, Vinicio engages with every project with genuine attention and care.", "author": "Mariana Fernández"}
   ],
-  "values": ["Strategic", "Innovative", "Data-Driven", "Customer-Focused", "Growth-Oriented", "Tech-Savvy", "Results-Driven", "Visionary"]
+  "values": ["Strategic", "Analytical", "Data-Informed", "Customer-Focused", "Research-Oriented", "Experienced", "Methodical", "Academic"]
 }

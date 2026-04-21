@@ -20,16 +20,16 @@ export default function BlogPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <Reveal>
-            <p className="section-label">Recent Blog</p>
+            <p className="section-label">Writings</p>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="mb-6">
-              Insights & Strategies for <span className="text-accent">Growth</span>
+              Notes and <span className="text-accent">observations</span>
             </h1>
           </Reveal>
           <Reveal delay={200}>
             <p className="text-xl text-text-muted max-w-3xl leading-relaxed">
-              Thought leadership on loyalty, growth, and e-learning across Latin America.
+              Personal writings on loyalty, business development, education, and organizational topics in Latin America.
             </p>
           </Reveal>
         </div>

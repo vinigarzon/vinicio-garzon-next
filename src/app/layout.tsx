@@ -4,21 +4,21 @@ import Footer from '@/components/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vinicio Garzón - Expert in Loyalty, Rewards & E-Learning',
-  description: 'Expert in loyalty, rewards, and e-learning, driving growth and connections across Latin America.',
-  keywords: 'loyalty programs, rewards, e-learning, growth, Latin America, Vinicio Garzón',
+  title: 'Vinicio Garzón — Personal & Professional Profile',
+  description: 'Personal and professional profile. Professional background in loyalty, rewards, and e-learning across Latin America. Currently pursuing academic studies in Sport Management at North Central College.',
+  keywords: 'Vinicio Garzón, Sport Management, North Central College, loyalty programs, e-learning, Latin America, Gurumba, Zegendia',
   authors: [{ name: 'Vinicio Garzón' }],
   openGraph: {
-    title: "I'm Vini - Vinicio Garzón",
-    description: 'Expert in loyalty, rewards, and e-learning, driving growth and connections.',
+    title: 'Vinicio Garzón — Personal & Professional Profile',
+    description: 'Personal and professional profile. Background in loyalty, rewards, and e-learning. Current academic studies in Sport Management.',
     url: 'https://www.viniciogarzon.com',
     siteName: 'Vinicio Garzón',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "I'm Vini - Vinicio Garzón",
-    description: 'Expert in loyalty, rewards, and e-learning.',
+    title: 'Vinicio Garzón — Personal & Professional Profile',
+    description: 'Professional background in loyalty, rewards, and e-learning. Current academic studies in Sport Management.',
   },
 };
 

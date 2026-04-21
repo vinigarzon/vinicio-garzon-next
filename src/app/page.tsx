@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import portfolio from '@/data/portfolio.json';
 import blog from '@/data/blog.json';
 import resume from '@/data/resume.json';
 import Reveal from '@/components/Reveal';
-import dynamic from 'next/dynamic';
-const AnimatedCounter = dynamic(() => import('@/components/AnimatedCounter'), { ssr: false });
-const SkillBar = dynamic(() => import('@/components/SkillBar'), { ssr: false });
 import Marquee from '@/components/Marquee';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+
+const AnimatedCounter = dynamic(() => import('@/components/AnimatedCounter'), { ssr: false });
+const SkillBar = dynamic(() => import('@/components/SkillBar'), { ssr: false });
 
 export default function Home() {
   const projects = portfolio.portfolio;
@@ -17,19 +18,17 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      {/* =================== HERO =================== */}
+      {/* HERO */}
       <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-        {/* Background glows */}
         <div className="hero-glow bg-accent w-[500px] h-[500px] top-0 -left-40" />
         <div className="hero-glow bg-accent w-[400px] h-[400px] bottom-0 -right-20" />
         <div className="noise-overlay" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid md:grid-cols-12 gap-8 items-center">
-            {/* Left content */}
             <div className="md:col-span-8">
               <Reveal>
-                <p className="section-label">I'm Vini</p>
+                <p className="section-label">Personal & Professional Profile</p>
               </Reveal>
 
               <Reveal delay={100}>
@@ -40,53 +39,49 @@ export default function Home() {
 
               <Reveal delay={200}>
                 <p className="text-xl md:text-2xl text-text-muted max-w-2xl mb-10 leading-relaxed">
-                  Expert in loyalty, rewards, and e-learning, driving growth and connections.
+                  Professional background in loyalty, rewards, and e-learning across Latin America. Currently pursuing academic studies in Sport Management at North Central College.
                 </p>
               </Reveal>
 
               <Reveal delay={300}>
                 <div className="flex flex-wrap gap-4 mb-12">
-                  <a href="#contact" className="btn-primary">
-                    Let's Do It
+                  <a href="#about-me" className="btn-primary">
+                    Learn More
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </a>
                   <a href="#portfolio" className="btn-outline">
-                    View My Work
+                    Explore Selected Work
                   </a>
                 </div>
               </Reveal>
             </div>
 
-            {/* Right - Let's Work Together card */}
             <div className="md:col-span-4">
               <Reveal delay={400}>
                 <div className="card bg-secondary-light border border-border p-8">
                   <h3 className="text-2xl font-display font-bold mb-4">
-                    Let's <span className="text-accent">Work</span> Together
+                    <span className="text-accent">Current</span> Focus
                   </h3>
-                  <p className="text-text-muted text-sm uppercase tracking-widest mb-2">
-                    I'm available at
+                  <p className="text-text-muted text-sm mb-6 leading-relaxed">
+                    Active academic path in Sport Management, alongside ongoing professional projects in Latin America and the United States.
+                  </p>
+                  <p className="text-text-muted text-xs uppercase tracking-widest mb-2">
+                    Contact
                   </p>
                   <a
                     href="mailto:yo@viniciogarzon.com"
-                    className="text-text hover:text-accent transition text-lg font-medium block mb-6 break-all"
+                    className="text-text hover:text-accent transition text-base font-medium block break-all"
                   >
                     yo@viniciogarzon.com
                   </a>
-                  <div className="pt-6 border-t border-border">
-                    <p className="text-text-muted text-sm">
-                      Serving all of <span className="text-accent font-semibold">Latin America</span>
-                    </p>
-                  </div>
                 </div>
               </Reveal>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
           <div className="w-6 h-10 rounded-full border-2 border-text-muted flex justify-center p-1.5">
             <div className="w-1 h-2 bg-accent rounded-full" />
@@ -94,36 +89,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== ABOUT ME =================== */}
+      {/* ABOUT */}
       <section id="about-me" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary border-t border-border">
         <div className="max-w-7xl mx-auto">
           <Reveal>
-            <p className="section-label">About Me</p>
+            <p className="section-label">About</p>
           </Reveal>
 
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7">
               <Reveal delay={100}>
                 <h2 className="mb-8">
-                  Hello! I'm passionate about driving growth through <span className="text-accent">loyalty</span>, <span className="text-accent">rewards</span>, and <span className="text-accent">e-learning</span>.
+                  A professional background in <span className="text-accent">loyalty</span>, <span className="text-accent">rewards</span>, and <span className="text-accent">e-learning</span>.
                 </h2>
               </Reveal>
 
               <Reveal delay={200}>
                 <p className="text-text-muted text-lg leading-relaxed mb-6">
-                  With over 20 years of experience, I help brands build lasting connections and empower individuals through transformative education and innovative strategies.
+                  Over two decades of experience in Latin America, with work focused on loyalty programs, customer engagement, educational platforms, and organizational growth initiatives.
                 </p>
               </Reveal>
 
               <Reveal delay={300}>
                 <p className="text-text-muted text-lg leading-relaxed mb-6">
-                  I specialize in loyalty, rewards, and e-learning, helping brands across Latin America build lasting relationships and drive growth. Our team designs loyalty programs, develops customer retention strategies, and leverages data-driven insights to support business and educational goals.
+                  The professional trajectory includes founding companies in loyalty and e-learning, as well as operational roles in national sales management. Areas of experience include strategy, data-informed decision making, and training programs for entrepreneurs and small organizations.
                 </p>
               </Reveal>
 
               <Reveal delay={400}>
                 <p className="text-accent text-xl font-display font-semibold">
-                  I can work from everywhere.
+                  Currently based in Naperville, USA.
                 </p>
               </Reveal>
             </div>
@@ -140,7 +135,7 @@ export default function Home() {
                   <div className="absolute bottom-6 left-6 right-6">
                     <p className="text-xs uppercase tracking-widest text-accent mb-2">Based in</p>
                     <p className="text-2xl font-display font-bold">Naperville, USA</p>
-                    <p className="text-sm text-text-muted mt-1">Serving Latin America</p>
+                    <p className="text-sm text-text-muted mt-1">Latin America · United States</p>
                   </div>
                 </div>
               </Reveal>
@@ -149,23 +144,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== WHAT I DO =================== */}
+      {/* AREAS OF EXPERIENCE */}
       <section id="what-i-do" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary relative overflow-hidden">
         <div className="hero-glow bg-accent w-[400px] h-[400px] top-0 right-0 opacity-[0.15]" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Reveal>
-              <p className="section-label justify-center">What I Do</p>
+              <p className="section-label justify-center">Areas of Experience</p>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="max-w-4xl mx-auto mb-6">
-                Empowering Growth, <span className="text-accent">Loyalty</span>, and Lifelong Learning Across Latin America
+                Professional work in <span className="text-accent">loyalty</span>, education, and organizational growth.
               </h2>
             </Reveal>
             <Reveal delay={200}>
               <p className="text-text-muted text-lg max-w-3xl mx-auto leading-relaxed">
-                I help brands across Latin America design and implement loyalty and rewards programs while driving business growth through innovative e-learning solutions.
+                Overview of the main areas where the professional experience has been developed, with a focus on applied work across Latin America.
               </p>
             </Reveal>
           </div>
@@ -191,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== STATS / COUNTERS =================== */}
+      {/* STATS */}
       <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-primary border-y border-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -208,18 +203,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== TESTIMONIALS =================== */}
+      {/* REFERENCES */}
       <section className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary relative overflow-hidden">
         <div className="hero-glow bg-accent w-[500px] h-[500px] bottom-0 left-1/4 opacity-[0.1]" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Reveal>
-              <p className="section-label justify-center">Social Proof</p>
+              <p className="section-label justify-center">References</p>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="max-w-3xl mx-auto">
-                What Clients <span className="text-accent">Say</span>
+                Notes from <span className="text-accent">colleagues</span> and collaborators.
               </h2>
             </Reveal>
           </div>
@@ -230,23 +225,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== PORTFOLIO =================== */}
+      {/* SELECTED PROJECTS */}
       <section id="portfolio" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
               <Reveal>
-                <p className="section-label">My Works</p>
+                <p className="section-label">Selected Projects</p>
               </Reveal>
               <Reveal delay={100}>
                 <h2 className="max-w-2xl">
-                  Growth Through <span className="text-accent">Loyalty</span> & Learning
+                  Work in <span className="text-accent">loyalty</span>, learning, and development.
                 </h2>
               </Reveal>
             </div>
             <Reveal delay={200}>
               <Link href="/portfolio" className="btn-outline shrink-0">
-                View All Works
+                View All Projects
               </Link>
             </Reveal>
           </div>
@@ -289,18 +284,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== MY RESUME =================== */}
+      {/* RESUME */}
       <section id="my-resume" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <Reveal>
-              <p className="section-label justify-center">My Resume</p>
+              <p className="section-label justify-center">Academic & Professional Background</p>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="max-w-4xl mx-auto">
-                Innovating Loyalty and Learning to Drive <span className="text-accent">Growth</span> Across Latin America
+                Experience, <span className="text-accent">education</span>, and current studies.
               </h2>
             </Reveal>
+          </div>
+
+          {/* Current Studies */}
+          <div className="mb-20">
+            <Reveal>
+              <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
+                <span className="w-10 h-px bg-accent" />
+                Current Studies
+              </h3>
+            </Reveal>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {resume.currentStudies.map((item, idx) => (
+                <Reveal key={item.number} delay={idx * 100}>
+                  <div className="card border-accent/40">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
+                      <p className="text-accent text-sm font-medium uppercase tracking-wider">
+                        {item.period}
+                      </p>
+                    </div>
+                    <h4 className="text-xl font-display font-bold mb-1">{item.title}</h4>
+                    <p className="text-text-muted text-sm mb-3 font-medium">{item.institution}</p>
+                    <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-16">
@@ -309,7 +332,7 @@ export default function Home() {
               <Reveal>
                 <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
                   <span className="w-10 h-px bg-accent" />
-                  My Experiences
+                  Professional Experience
                 </h3>
               </Reveal>
 
@@ -330,12 +353,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Education */}
+            {/* Completed Degrees */}
             <div>
               <Reveal>
                 <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
                   <span className="w-10 h-px bg-accent" />
-                  My Education
+                  Completed Degrees
                 </h3>
               </Reveal>
 
@@ -356,10 +379,37 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Additional Training */}
+          {resume.additionalTraining && resume.additionalTraining.length > 0 && (
+            <div className="mt-20">
+              <Reveal>
+                <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
+                  <span className="w-10 h-px bg-accent" />
+                  Additional Academic Training
+                </h3>
+              </Reveal>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {resume.additionalTraining.map((item, idx) => (
+                  <Reveal key={item.number} delay={idx * 100}>
+                    <div className="card">
+                      <p className="text-accent text-sm font-medium mb-2 uppercase tracking-wider">
+                        {item.period}
+                      </p>
+                      <h4 className="text-xl font-display font-bold mb-1">{item.title}</h4>
+                      <p className="text-text-muted text-sm mb-3 font-medium">{item.institution}</p>
+                      <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* =================== TECHNICAL SKILLS =================== */}
+      {/* TECHNICAL PROFICIENCY */}
       <section className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary relative overflow-hidden">
         <div className="hero-glow bg-accent w-[400px] h-[400px] top-20 right-0 opacity-[0.1]" />
 
@@ -370,7 +420,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={100}>
               <h2>
-                Technical Skills & <span className="text-accent">Proficiency</span>
+                Technical <span className="text-accent">Proficiency</span>
               </h2>
             </Reveal>
           </div>
@@ -389,17 +439,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== BLOG =================== */}
+      {/* WRITINGS */}
       <section id="blog" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <div>
               <Reveal>
-                <p className="section-label">Recent Blog</p>
+                <p className="section-label">Writings</p>
               </Reveal>
               <Reveal delay={100}>
                 <h2 className="max-w-2xl">
-                  Insights & Strategies for <span className="text-accent">Growth</span>
+                  Notes and <span className="text-accent">observations</span>.
                 </h2>
               </Reveal>
             </div>
@@ -448,7 +498,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Secondary row with the remaining 2 posts */}
           {recentPosts.length > 3 && (
             <div className="grid md:grid-cols-2 gap-6 mt-6">
               {recentPosts.slice(3, 5).map((post, idx) => (
@@ -482,24 +531,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =================== CONTACT =================== */}
+      {/* CONTACT */}
       <section id="contact" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary relative overflow-hidden">
         <div className="hero-glow bg-accent w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.1]" />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Reveal>
-            <p className="section-label justify-center">Contact Me</p>
+            <p className="section-label justify-center">Contact</p>
           </Reveal>
 
           <Reveal delay={100}>
             <h2 className="mb-8">
-              Let's make something <span className="text-accent">great</span> together.
+              For academic, professional, or <span className="text-accent">project-related</span> inquiries.
             </h2>
           </Reveal>
 
           <Reveal delay={200}>
             <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto mb-12">
-              Ready to transform your business with loyalty, rewards, and e-learning solutions? Let's connect.
+              This page serves as a personal and professional reference. For direct contact, please use the information below.
             </p>
           </Reveal>
 
@@ -511,7 +560,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-display font-bold mb-2">Email Me</h3>
+                <h3 className="text-lg font-display font-bold mb-2">Email</h3>
                 <a href="mailto:yo@viniciogarzon.com" className="text-text-muted hover:text-accent transition text-sm break-all">
                   yo@viniciogarzon.com
                 </a>
@@ -522,11 +571,12 @@ export default function Home() {
               <div className="card text-center h-full">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-display font-bold mb-2">Call Me</h3>
-                <p className="text-text-muted text-sm">By appointment</p>
+                <h3 className="text-lg font-display font-bold mb-2">Current Studies</h3>
+                <p className="text-text-muted text-sm">North Central College</p>
               </div>
             </Reveal>
 
@@ -538,24 +588,15 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-display font-bold mb-2">Let's Connect</h3>
-                <p className="text-text-muted text-sm">Serving all of Latin America</p>
+                <h3 className="text-lg font-display font-bold mb-2">Location</h3>
+                <p className="text-text-muted text-sm">Naperville, USA</p>
               </div>
             </Reveal>
           </div>
-
-          <Reveal delay={600}>
-            <a href="mailto:yo@viniciogarzon.com" className="btn-primary">
-              Start a Conversation
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </Reveal>
         </div>
       </section>
 
-      {/* =================== MARQUEE / VALUES =================== */}
+      {/* MARQUEE / VALUES */}
       <Marquee items={resume.values} />
       <Marquee items={resume.values} reverse />
     </div>

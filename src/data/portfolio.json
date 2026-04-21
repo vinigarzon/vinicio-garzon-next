@@ -1,6 +1,24 @@
 {
   "portfolio": [
     {
+      "id": "lincoln-bizlab",
+      "title": "Lincoln BizLab",
+      "category": "Training & Development Initiative",
+      "description": "A hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois.",
+      "image": "https://lincolnbizlab.com/wp-content/uploads/2024/10/bizlab-cover.jpg",
+      "thumbnail": "https://lincolnbizlab.com/wp-content/uploads/2024/10/bizlab-cover.jpg",
+      "tags": ["Training Center", "Business Development", "Community Initiative"],
+      "client": "Lincoln, Illinois",
+      "year": "2024",
+      "deliverables": ["Hybrid Training Programs", "Business Development Resources", "Community Engagement"],
+      "achievements": ["Supporting Local Business Growth", "Bridging Academic and Practical Training", "Regional Economic Initiative"],
+      "fullDescription": "Lincoln BizLab is a hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois. The project combines structured training, business development resources, and community-oriented programs to support local economic activity. More information is available at lincolnbizlab.com.",
+      "website": "https://lincolnbizlab.com/",
+      "services": [],
+      "gallery": [],
+      "testimonials": []
+    },
+    {
       "id": "fans",
       "title": "DirecTV Fans",
       "category": "Loyalty Platform",

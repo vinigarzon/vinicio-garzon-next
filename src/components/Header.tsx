@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/#home' },
-  { label: 'About me', href: '/#about-me' },
-  { label: 'What I Do', href: '/#what-i-do' },
-  { label: 'Portfolio', href: '/#portfolio' },
-  { label: 'My Resume', href: '/#my-resume' },
-  { label: 'Blog', href: '/#blog' },
-  { label: 'Contact Me', href: '/#contact' },
+  { label: 'About', href: '/#about-me' },
+  { label: 'Experience', href: '/#what-i-do' },
+  { label: 'Projects', href: '/#portfolio' },
+  { label: 'Resume', href: '/#my-resume' },
+  { label: 'Writings', href: '/#blog' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
@@ -59,7 +59,7 @@ export default function Header() {
             href="mailto:yo@viniciogarzon.com"
             className="px-6 py-2.5 bg-accent text-primary rounded-full font-semibold text-sm hover:bg-accent-dark transition-all hover:scale-105"
           >
-            Let's Talk
+            Contact
           </a>
         </div>
 
@@ -97,7 +97,7 @@ export default function Header() {
               href="mailto:yo@viniciogarzon.com"
               className="mt-4 block px-6 py-3 bg-accent text-primary rounded-full font-semibold text-center"
             >
-              Let's Talk
+              Contact
             </a>
           </div>
         </div>
