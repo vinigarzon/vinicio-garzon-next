@@ -148,7 +148,7 @@ h3 {
 
 /* Timeline item */
 .timeline-dot {
-  @apply absolute -left-[6.5px] top-2 w-3 h-3 rounded-full bg-accent;
+  @apply absolute -left-[34px] top-1 w-2.5 h-2.5 rounded-full bg-accent ring-4 ring-secondary;
 }
 
 /* Gradient text utility */
