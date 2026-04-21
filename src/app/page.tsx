@@ -5,8 +5,9 @@ import portfolio from '@/data/portfolio.json';
 import blog from '@/data/blog.json';
 import resume from '@/data/resume.json';
 import Reveal from '@/components/Reveal';
-import AnimatedCounter from '@/components/AnimatedCounter';
-import SkillBar from '@/components/SkillBar';
+import dynamic from 'next/dynamic';
+const AnimatedCounter = dynamic(() => import('@/components/AnimatedCounter'), { ssr: false });
+const SkillBar = dynamic(() => import('@/components/SkillBar'), { ssr: false });
 import Marquee from '@/components/Marquee';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
