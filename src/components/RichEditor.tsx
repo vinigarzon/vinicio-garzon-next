@@ -24,7 +24,16 @@ export default function RichEditor({ content, onChange }: { content: string; onC
     ],
     content,
     onUpdate: ({ editor }) => onChange(editor.getHTML()),
-    editorProps: { attributes: { class: 'rich-ed min-h-[400px] outline-none p-5 text-gray-200' } },
+    editorProps: {
+      attributes: { class: 'rich-ed min-h-[400px] outline-none p-5 text-gray-200' },
+      // Strip inline styles when pasting from external sources
+      transformPastedHTML(html: string) {
+        // Remove color, background-color, font-family inline styles
+        return html
+          .replace(/\sstyle="[^"]*"/gi, '')
+          .replace(/\sstyle='[^']*'/gi, '');
+      },
+    },
   });
 
   useEffect(() => { if (ed && content !== ed.getHTML()) ed.commands.setContent(content, { emitUpdate: false }); }, [content]); // eslint-disable-line
@@ -85,6 +94,13 @@ export default function RichEditor({ content, onChange }: { content: string; onC
         .rich-ed hr{border:none;border-top:1px solid #333;margin:1.8rem 0}
         .rich-ed img{max-width:100%;border-radius:.75rem;margin:1.2rem 0}
         .ProseMirror:focus{outline:none}
+        /* Override inline colors from pasted content (Google Docs, web pages, etc.) */
+        .rich-ed span[style*="color"],
+        .rich-ed p[style*="color"],
+        .rich-ed li[style*="color"] { color: inherit !important; }
+        .rich-ed span[style*="background"],
+        .rich-ed p[style*="background"] { background: transparent !important; }
+        .rich-ed *[style*="font-family"] { font-family: inherit !important; }
       `}</style>
       <EditorContent editor={ed} />
     </div>

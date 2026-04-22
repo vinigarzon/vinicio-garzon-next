@@ -221,30 +221,48 @@ a, button {
 /* Rich blog content styling */
 .blog-content {
   @apply text-lg text-text-muted leading-relaxed;
+  color: var(--text-muted) !important;
+}
+
+/* Force override ANY inline color styles from pasted content (Google Docs, web, etc.) */
+.blog-content *,
+.blog-content span,
+.blog-content p,
+.blog-content li,
+.blog-content td {
+  color: inherit !important;
+  background-color: transparent !important;
+  font-family: inherit !important;
 }
 
 .blog-content h2 {
-  @apply text-3xl md:text-4xl font-display font-bold text-text mt-12 mb-6 leading-tight;
+  @apply text-3xl md:text-4xl font-display font-bold mt-12 mb-6 leading-tight;
+  color: var(--text) !important;
 }
 
 .blog-content h3 {
-  @apply text-2xl md:text-3xl font-display font-bold text-text mt-10 mb-4 leading-tight;
+  @apply text-2xl md:text-3xl font-display font-bold mt-10 mb-4 leading-tight;
+  color: var(--text) !important;
 }
 
 .blog-content h4 {
-  @apply text-xl md:text-2xl font-display font-semibold text-text mt-8 mb-3;
+  @apply text-xl md:text-2xl font-display font-semibold mt-8 mb-3;
+  color: var(--text) !important;
 }
 
 .blog-content p {
-  @apply mb-6 text-text-muted leading-relaxed;
+  @apply mb-6 leading-relaxed;
+  color: var(--text-muted) !important;
 }
 
 .blog-content a {
-  @apply text-accent hover:text-accent-dark underline underline-offset-4 transition;
+  @apply underline underline-offset-4 transition;
+  color: var(--accent) !important;
 }
 
 .blog-content strong {
-  @apply text-text font-semibold;
+  @apply font-semibold;
+  color: var(--text) !important;
 }
 
 .blog-content em {
@@ -253,7 +271,8 @@ a, button {
 
 .blog-content ul,
 .blog-content ol {
-  @apply mb-6 pl-6 space-y-2 text-text-muted;
+  @apply mb-6 pl-6 space-y-2;
+  color: var(--text-muted) !important;
 }
 
 .blog-content ul {
@@ -266,10 +285,11 @@ a, button {
 
 .blog-content li {
   @apply leading-relaxed;
+  color: var(--text-muted) !important;
 }
 
 .blog-content li::marker {
-  @apply text-accent;
+  color: var(--accent) !important;
 }
 
 .blog-content blockquote {
@@ -277,11 +297,13 @@ a, button {
 }
 
 .blog-content blockquote p {
-  @apply text-xl italic text-text leading-relaxed mb-0;
+  @apply text-xl italic leading-relaxed mb-0;
+  color: var(--text) !important;
 }
 
 .blog-content blockquote cite {
-  @apply block text-sm text-text-muted not-italic mt-3 font-medium uppercase tracking-wider;
+  @apply block text-sm not-italic mt-3 font-medium uppercase tracking-wider;
+  color: var(--text-muted) !important;
 }
 
 .blog-content hr {
@@ -293,5 +315,7 @@ a, button {
 }
 
 .blog-content code {
-  @apply bg-secondary-light text-accent px-2 py-0.5 rounded text-sm font-mono;
+  @apply bg-secondary-light px-2 py-0.5 rounded text-sm font-mono;
+  color: var(--accent) !important;
+  background-color: #1f1f1f !important;
 }
