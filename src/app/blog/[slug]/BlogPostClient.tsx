@@ -74,7 +74,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light">
-              <img src={post.fullImage || post.image} alt={post.title} className="w-full h-full object-cover editorial-filter" />
+              <img src={post.fullImage || post.image} alt={post.title} className="w-full h-full object-cover" />
             </div>
           </Reveal>
         </div>

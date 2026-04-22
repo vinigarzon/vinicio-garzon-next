@@ -54,7 +54,7 @@ export default function PortfolioDetailClient({ id }: { id: string }) {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light">
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover editorial-filter" />
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
             </div>
           </Reveal>
         </div>

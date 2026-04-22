@@ -34,9 +34,11 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-display font-bold text-text group-hover:text-accent transition">
-            I'm <span className="text-accent">Vini</span>
-          </span>
+          <img
+            src="/images/logo.png"
+            alt="Vinicio Garzón"
+            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition"
+          />
         </Link>
 
         {/* Desktop Navigation */}

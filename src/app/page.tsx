@@ -76,9 +76,9 @@ export default function Home() {
             </div>
 
             {/* Portrait column */}
-            <div className="md:col-span-5">
+            <div className="md:col-span-5 flex items-end justify-center md:justify-end">
               <Reveal delay={200}>
-                <div className="hero-portrait aspect-[4/5] max-w-md mx-auto md:ml-auto md:mr-0">
+                <div className="hero-portrait w-full max-w-sm md:max-w-md">
                   <img src="/images/vinicio-portrait.png" alt="Vinicio Garzón Castrillón" />
                 </div>
               </Reveal>
@@ -121,7 +121,7 @@ export default function Home() {
               </Reveal>
             </div>
 
-            <div className="md:col-span-5">
+            <div className="md:col-span-5 flex items-end justify-center md:justify-end">
               <Reveal delay={200}>
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                   <img
@@ -252,7 +252,7 @@ export default function Home() {
                     <img
                       src={project.thumbnail}
                       alt={project.title}
-                      className="portfolio-card-image editorial-filter"
+                      className="portfolio-card-image editorial-filter-group"
                     />
                     <div className="portfolio-card-overlay">
                       <p className="text-xs uppercase tracking-widest text-accent mb-2">
@@ -467,7 +467,7 @@ export default function Home() {
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group"
                       />
                     </div>
                     <div className="p-6">
@@ -506,7 +506,7 @@ export default function Home() {
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group"
                         />
                       </div>
                       <div className="p-6 sm:w-3/5">

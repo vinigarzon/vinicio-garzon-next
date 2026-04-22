@@ -22,9 +22,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-5">
             <Link href="/" className="inline-block mb-5">
-              <span className="text-4xl font-display font-bold">
-                I'm <span className="text-accent">Vini</span>
-              </span>
+              <img
+                src="/images/logo.png"
+                alt="Vinicio Garzón"
+                className="h-12 w-auto opacity-90 hover:opacity-100 transition"
+              />
             </Link>
             <p className="text-text-muted text-base max-w-sm leading-relaxed mb-6">
               Personal and professional profile. Background in loyalty, rewards, and e-learning across Latin America. Currently pursuing academic studies in Sport Management.
