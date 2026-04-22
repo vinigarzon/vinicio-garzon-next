@@ -16,6 +16,7 @@ const LBL = "block text-xs font-medium text-gray-400 mb-1.5 uppercase tracking-w
 export default function PostForm({ init, editing }: { init?: any; editing?: boolean }) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [msg, setMsg] = useState('');
   const [tab, setTab] = useState<'content'|'meta'|'seo'>('content');
   const [autoSlug, setAutoSlug] = useState(!editing);
@@ -100,9 +101,52 @@ export default function PostForm({ init, editing }: { init?: any; editing?: bool
             </div>
           </div>
           <div>
-            <label className={LBL}>Featured Image URL</label>
-            <input value={f.image} onChange={set('image')} placeholder="https://… or /images/blog/…" className={INP} />
+            <label className={LBL}>Featured Image</label>
+            <div className="flex gap-2 items-start">
+              <input
+                value={f.image}
+                onChange={set('image')}
+                placeholder="Paste URL or upload file →"
+                className={INP}
+              />
+              <label className="shrink-0 px-4 py-2.5 bg-[#1a1a1a] border border-[#333] text-gray-300 rounded-xl text-sm cursor-pointer hover:border-[#c9f31d] hover:text-[#c9f31d] transition whitespace-nowrap">
+                {uploading ? '…' : '📤 Upload'}
+                <input
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    setUploading(true);
+                    setMsg('');
+                    try {
+                      const fd = new FormData();
+                      fd.append('file', file);
+                      const res = await fetch('/api/blog/upload', {
+                        method: 'POST',
+                        headers: { 'x-admin-key': KEY },
+                        body: fd,
+                      });
+                      const data = await res.json();
+                      if (data.url) {
+                        setF(p => ({ ...p, image: data.url }));
+                        setMsg('✓ Image uploaded');
+                      } else {
+                        setMsg('Upload failed: ' + (data.error || 'unknown'));
+                      }
+                    } catch {
+                      setMsg('Upload failed');
+                    } finally {
+                      setUploading(false);
+                      e.target.value = '';
+                    }
+                  }}
+                />
+              </label>
+            </div>
             {f.image && <img src={f.image} alt="" className="mt-3 h-36 w-full object-cover rounded-xl opacity-70" />}
+            <p className="text-xs text-gray-600 mt-2">JPG, PNG, WebP, GIF or SVG · max 5MB</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>

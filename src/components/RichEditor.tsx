@@ -46,7 +46,33 @@ export default function RichEditor({ content, onChange }: { content: string; onC
     else ed?.chain().focus().setLink({ href: url }).run();
   }, [ed]);
 
-  const img = useCallback(() => { const u = window.prompt('Image URL:'); if (u) ed?.chain().focus().setImage({ src: u }).run(); }, [ed]);
+  const img = useCallback(() => {
+    const choice = window.prompt('Image source — type:\n  URL → paste the URL\n  (leave blank) → upload file from computer', 'upload');
+    if (choice === null) return;
+
+    if (choice === '' || choice.toLowerCase() === 'upload') {
+      // Open file picker
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = async () => {
+        const file = input.files?.[0];
+        if (!file) return;
+        const fd = new FormData();
+        fd.append('file', file);
+        const KEY = process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY || 'vg-admin-2025';
+        try {
+          const res = await fetch('/api/blog/upload', { method: 'POST', headers: { 'x-admin-key': KEY }, body: fd });
+          const data = await res.json();
+          if (data.url) ed?.chain().focus().setImage({ src: data.url }).run();
+          else alert('Upload failed: ' + (data.error || 'unknown'));
+        } catch { alert('Upload failed'); }
+      };
+      input.click();
+    } else {
+      ed?.chain().focus().setImage({ src: choice }).run();
+    }
+  }, [ed]);
 
   if (!ed) return <div className="h-96 bg-[#111] border border-[#333] rounded-xl animate-pulse" />;
 

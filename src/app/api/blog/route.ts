@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getAllPosts, getPublishedPosts, savePost, generateId, generateSlug, calcReadTime, BlogPost } from '@/lib/blog-store';
 import { sanitizeContent } from '@/lib/sanitize-html';
 
@@ -21,12 +22,20 @@ export async function POST(req: NextRequest) {
     date: b.date || now.split('T')[0], image: b.image || '', fullImage: b.fullImage || b.image || '',
     category: b.category || 'General', tags: Array.isArray(b.tags) ? b.tags : [],
     excerpt: b.excerpt || '',
-    content: sanitizeContent(b.content || ''),  // ← sanitize on save
+    content: sanitizeContent(b.content || ''),
     status: b.status || 'draft',
     scheduledAt: b.scheduledAt, readTime: calcReadTime(b.content || ''),
     seoTitle: b.seoTitle || '', seoDescription: b.seoDescription || '',
     createdAt: b.createdAt || now, updatedAt: now,
   };
   await savePost(post);
+
+  // Instantly revalidate public pages — no more 2-minute wait
+  try {
+    revalidatePath('/');
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${post.slug}`);
+  } catch {}
+
   return NextResponse.json({ post });
 }
