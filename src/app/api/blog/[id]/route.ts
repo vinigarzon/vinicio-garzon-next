@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getPostById, savePost, deletePost, calcReadTime } from '@/lib/blog-store';
+import { sanitizeContent } from '@/lib/sanitize-html';
 
 const ok = (req: NextRequest) => req.headers.get('x-admin-key') === (process.env.ADMIN_SECRET_KEY || 'vg-admin-2025');
 
@@ -16,7 +17,12 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
   const existing = await getPostById(id);
   if (!existing) return NextResponse.json({ error: 'Not found' }, { status: 404 });
   const b = await req.json();
-  const updated = { ...existing, ...b, id, readTime: calcReadTime(b.content || existing.content), updatedAt: new Date().toISOString() };
+  const updated = {
+    ...existing, ...b, id,
+    content: sanitizeContent(b.content || existing.content),  // ← sanitize on update
+    readTime: calcReadTime(b.content || existing.content),
+    updatedAt: new Date().toISOString()
+  };
   await savePost(updated);
   return NextResponse.json({ post: updated });
 }

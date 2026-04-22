@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllPosts, getPublishedPosts, savePost, generateId, generateSlug, calcReadTime, BlogPost } from '@/lib/blog-store';
+import { sanitizeContent } from '@/lib/sanitize-html';
 
 const ok = (req: NextRequest) => req.headers.get('x-admin-key') === (process.env.ADMIN_SECRET_KEY || 'vg-admin-2025');
 
@@ -19,7 +20,9 @@ export async function POST(req: NextRequest) {
     author: b.author || 'Vinicio Garzón Castrillón',
     date: b.date || now.split('T')[0], image: b.image || '', fullImage: b.fullImage || b.image || '',
     category: b.category || 'General', tags: Array.isArray(b.tags) ? b.tags : [],
-    excerpt: b.excerpt || '', content: b.content || '', status: b.status || 'draft',
+    excerpt: b.excerpt || '',
+    content: sanitizeContent(b.content || ''),  // ← sanitize on save
+    status: b.status || 'draft',
     scheduledAt: b.scheduledAt, readTime: calcReadTime(b.content || ''),
     seoTitle: b.seoTitle || '', seoDescription: b.seoDescription || '',
     createdAt: b.createdAt || now, updatedAt: now,

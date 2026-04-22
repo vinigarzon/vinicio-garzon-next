@@ -47,6 +47,16 @@ export default function AdminDashboard() {
     else alert('Error: ' + d.error);
   };
 
+  const sanitize = async () => {
+    const r = await fetch('/api/blog/sanitize', { method: 'POST', headers: { 'x-admin-key': KEY } });
+    const d = await r.json();
+    if (d.results) {
+      const cleaned = d.results.filter((x: any) => x.cleaned).map((x: any) => x.slug);
+      alert(cleaned.length > 0 ? `Fixed styling in: ${cleaned.join(', ')}` : 'All posts already clean!');
+      load();
+    } else alert('Error: ' + d.error);
+  };
+
   const cnt = { all: posts.length, published: posts.filter(p => p.status === 'published').length, draft: posts.filter(p => p.status === 'draft').length, scheduled: posts.filter(p => p.status === 'scheduled').length };
   const vis = posts.filter(p => (filter === 'all' || p.status === filter) && (!q || p.title.toLowerCase().includes(q.toLowerCase())));
 
@@ -110,6 +120,20 @@ export default function AdminDashboard() {
           <p className="text-yellow-300 text-sm mb-3">Migrate your existing 5 posts from static JSON to the database?</p>
           <button onClick={seed} className="px-5 py-2 bg-yellow-500 text-black font-bold rounded-lg text-sm hover:bg-yellow-400 transition">
             Migrate Static Posts
+          </button>
+        </div>
+      )}
+
+      {/* Fix pasted content styling — always visible */}
+      {posts.length > 0 && (
+        <div className="mt-8 p-4 bg-[#111] border border-[#222] rounded-xl flex items-center justify-between">
+          <div>
+            <p className="text-gray-300 text-sm font-medium">Fix black text from pasted content</p>
+            <p className="text-gray-500 text-xs mt-0.5">Run this after pasting text from ChatGPT, Google Docs, or Word</p>
+          </div>
+          <button onClick={sanitize}
+            className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition shrink-0">
+            🧹 Fix Styling
           </button>
         </div>
       )}
