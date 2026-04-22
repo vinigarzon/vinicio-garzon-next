@@ -185,7 +185,7 @@ a, button {
   transition: filter 0.6s ease;
 }
 
-/* Hover: parent has .group class → child with .editorial-filter-group goes to color */
+/* Group hover: parent .group → child reverts to color */
 .editorial-filter-group {
   filter: grayscale(100%) brightness(0.95) contrast(1.05);
   transition: filter 0.6s ease;
@@ -194,10 +194,20 @@ a, button {
   filter: grayscale(0%) brightness(1) contrast(1);
 }
 
-/* Hero portrait - transparent PNG — no aspect ratio, blends with dark bg */
+/* Naperville image: hover reveals color */
+.naperville-img {
+  filter: grayscale(100%) brightness(0.9) contrast(1.05);
+  transition: filter 0.7s ease;
+}
+.naperville-img:hover {
+  filter: grayscale(0%) brightness(1) contrast(1);
+}
+
+/* Hero portrait - transparent B&W PNG, no box/border, blends with dark bg */
 .hero-portrait {
   position: relative;
   overflow: visible;
+  background: transparent;
 }
 
 .hero-portrait img {
@@ -205,19 +215,7 @@ a, button {
   height: auto;
   display: block;
   object-fit: contain;
-}
-
-/* Soft gradient fade on edges to blend with dark background */
-.hero-portrait::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to left,  transparent 55%, rgba(10,10,10,0.55) 100%),
-    linear-gradient(to bottom, transparent 65%, rgba(10,10,10,0.5) 100%),
-    linear-gradient(to top,   transparent 85%, rgba(10,10,10,0.3) 100%);
-  pointer-events: none;
-  z-index: 2;
+  /* No filter here — B&W already baked into the PNG */
 }
 
 /* Rich blog content styling */

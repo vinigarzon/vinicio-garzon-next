@@ -123,11 +123,11 @@ export default function Home() {
 
             <div className="md:col-span-5 flex items-end justify-center md:justify-end">
               <Reveal delay={200}>
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden group">
                   <img
                     src="https://www.viniciogarzon.com/wp-content/uploads/2025/01/naperville.jpg"
                     alt="Naperville"
-                    className="w-full h-full object-cover editorial-filter"
+                    className="w-full h-full object-cover naperville-img"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 z-10">
