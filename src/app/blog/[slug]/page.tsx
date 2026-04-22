@@ -4,6 +4,7 @@ import Reveal from '@/components/Reveal';
 import { getPublishedPosts, getPostBySlug } from '@/lib/blog-store';
 
 export const revalidate = 60;
+export const dynamicParams = true; // Allow new slugs not in generateStaticParams
 
 export async function generateStaticParams() {
   try { return (await getPublishedPosts()).map(p => ({ slug: p.slug })); }
