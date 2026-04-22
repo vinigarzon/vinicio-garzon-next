@@ -18,7 +18,9 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ key:
     return new NextResponse(blob as ArrayBuffer, {
       headers: {
         'Content-Type': contentType,
-        'Cache-Control': 'public, max-age=31536000, immutable',
+        // Cache images for 1 day, then revalidate
+        // Each uploaded image gets a unique name with timestamp, so cache is always fresh
+        'Cache-Control': 'public, max-age=86400',
       },
     });
   } catch (e) {

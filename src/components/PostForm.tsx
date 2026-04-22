@@ -131,7 +131,7 @@ export default function PostForm({ init, editing }: { init?: any; editing?: bool
                       const data = await res.json();
                       if (data.url) {
                         setF(p => ({ ...p, image: data.url }));
-                        setMsg('✓ Image uploaded');
+                        setMsg('✓ New image URL — save post to update');
                       } else {
                         setMsg('Upload failed: ' + (data.error || 'unknown'));
                       }
