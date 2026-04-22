@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Admin secret key — change this to a strong password before going live
+# This is the password to access /admin
+[context.production.environment]
+  ADMIN_SECRET_KEY = "vg-admin-2025"
+  NEXT_PUBLIC_ADMIN_SECRET_KEY = "vg-admin-2025"
+
+[context.deploy-preview.environment]
+  ADMIN_SECRET_KEY = "vg-admin-2025"
+  NEXT_PUBLIC_ADMIN_SECRET_KEY = "vg-admin-2025"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -3,19 +3,18 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import portfolio from '@/data/portfolio.json';
-import blog from '@/data/blog.json';
 import resume from '@/data/resume.json';
 import Reveal from '@/components/Reveal';
 import Marquee from '@/components/Marquee';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import ServiceIcon from '@/components/ServiceIcon';
+import HomeBlogSection from '@/components/HomeBlogSection';
 
 const AnimatedCounter = dynamic(() => import('@/components/AnimatedCounter'), { ssr: false });
 const SkillBar = dynamic(() => import('@/components/SkillBar'), { ssr: false });
 
 export default function Home() {
   const projects = portfolio.portfolio;
-  const recentPosts = blog.posts.slice(0, 5);
 
   return (
     <div className="w-full">
@@ -437,99 +436,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WRITINGS */}
-      <section id="blog" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-secondary">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-            <div>
-              <Reveal>
-                <p className="section-label">Writings</p>
-              </Reveal>
-              <Reveal delay={100}>
-                <h2 className="max-w-2xl">
-                  Notes and <span className="text-accent">observations</span>.
-                </h2>
-              </Reveal>
-            </div>
-            <Reveal delay={200}>
-              <Link href="/blog" className="btn-outline shrink-0">
-                View All Articles
-              </Link>
-            </Reveal>
-          </div>
+      <HomeBlogSection />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentPosts.slice(0, 3).map((post, idx) => (
-              <Reveal key={post.id} delay={idx * 100}>
-                <Link href={`/blog/${post.slug}`} className="block group">
-                  <article className="card h-full overflow-hidden p-0">
-                    <div className="aspect-[16/10] overflow-hidden bg-primary">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-medium uppercase tracking-wider">
-                          {post.category}
-                        </span>
-                        <span className="text-xs text-text-dim">
-                          {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-display font-bold mb-3 group-hover:text-accent transition line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-text-muted text-sm line-clamp-2 mb-4">{post.excerpt}</p>
-                      <span className="text-accent text-sm font-medium flex items-center gap-1">
-                        Read More
-                        <svg className="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </div>
-                  </article>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-
-          {recentPosts.length > 3 && (
-            <div className="grid md:grid-cols-2 gap-6 mt-6">
-              {recentPosts.slice(3, 5).map((post, idx) => (
-                <Reveal key={post.id} delay={idx * 100}>
-                  <Link href={`/blog/${post.slug}`} className="block group">
-                    <article className="card h-full overflow-hidden p-0 flex flex-col sm:flex-row">
-                      <div className="sm:w-2/5 aspect-[16/10] sm:aspect-auto overflow-hidden bg-primary">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group"
-                        />
-                      </div>
-                      <div className="p-6 sm:w-3/5">
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-medium uppercase tracking-wider">
-                            {post.category}
-                          </span>
-                        </div>
-                        <h3 className="text-lg font-display font-bold mb-3 group-hover:text-accent transition line-clamp-2">
-                          {post.title}
-                        </h3>
-                        <p className="text-text-muted text-sm line-clamp-2">{post.excerpt}</p>
-                      </div>
-                    </article>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* CONTACT */}
+            {/* CONTACT */}
       <section id="contact" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary relative overflow-hidden">
         <div className="hero-glow bg-accent w-[600px] h-[600px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.1]" />
 
