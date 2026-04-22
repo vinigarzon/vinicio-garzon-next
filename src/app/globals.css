@@ -218,118 +218,159 @@ a, button {
   /* No filter here — B&W already baked into the PNG */
 }
 
-/* Rich blog content styling */
+/* Rich blog content styling — all values explicit, no Tailwind variables */
 .blog-content {
-  @apply text-lg text-text-muted leading-relaxed;
-  color: var(--text-muted) !important;
-}
-
-/* Force override ANY inline color styles from pasted content (Google Docs, ChatGPT, etc.) */
-/* Using explicit colors instead of 'inherit' to avoid inheriting black from parent spans */
-.blog-content span,
-.blog-content div:not([class]),
-.blog-content td {
-  color: #9ca3af !important;
-  background-color: transparent !important;
-  font-family: inherit !important;
-}
-
-/* Specific overrides for bold/italic inside spans */
-.blog-content span strong,
-.blog-content span b,
-.blog-content p strong,
-.blog-content p b {
-  color: #ffffff !important;
-}
-
-.blog-content span em,
-.blog-content span i,
-.blog-content p em,
-.blog-content p i {
-  color: #9ca3af !important;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #9a9a9a;
 }
 
 .blog-content h2 {
-  @apply text-3xl md:text-4xl font-display font-bold mt-12 mb-6 leading-tight;
-  color: var(--text) !important;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .blog-content h3 {
-  @apply text-2xl md:text-3xl font-display font-bold mt-10 mb-4 leading-tight;
-  color: var(--text) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .blog-content h4 {
-  @apply text-xl md:text-2xl font-display font-semibold mt-8 mb-3;
-  color: var(--text) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
 }
 
 .blog-content p {
-  @apply mb-6 leading-relaxed;
-  color: var(--text-muted) !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #9a9a9a;
 }
 
 .blog-content a {
-  @apply underline underline-offset-4 transition;
-  color: var(--accent) !important;
+  color: #c9f31d;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.blog-content strong {
-  @apply font-semibold;
-  color: var(--text) !important;
+.blog-content strong,
+.blog-content b {
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.blog-content em {
-  @apply italic;
+.blog-content em,
+.blog-content i {
+  font-style: italic;
 }
 
 .blog-content ul,
 .blog-content ol {
-  @apply mb-6 pl-6 space-y-2;
-  color: var(--text-muted) !important;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #9a9a9a;
 }
 
 .blog-content ul {
-  @apply list-disc;
+  list-style-type: disc;
 }
 
 .blog-content ol {
-  @apply list-decimal;
+  list-style-type: decimal;
 }
 
 .blog-content li {
-  @apply leading-relaxed;
-  color: var(--text-muted) !important;
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  color: #9a9a9a;
 }
 
 .blog-content li::marker {
-  color: var(--accent) !important;
+  color: #c9f31d;
 }
 
 .blog-content blockquote {
-  @apply border-l-4 border-accent bg-secondary-light/40 pl-6 pr-4 py-4 my-8 rounded-r-lg;
+  border-left: 4px solid #c9f31d;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .blog-content blockquote p {
-  @apply text-xl italic leading-relaxed mb-0;
-  color: var(--text) !important;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #e5e5e5;
+  margin-bottom: 0;
 }
 
 .blog-content blockquote cite {
-  @apply block text-sm not-italic mt-3 font-medium uppercase tracking-wider;
-  color: var(--text-muted) !important;
+  display: block;
+  font-size: 0.875rem;
+  font-style: normal;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9a9a9a;
 }
 
 .blog-content hr {
-  @apply border-border my-12;
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 3rem 0;
 }
 
 .blog-content img {
-  @apply rounded-xl my-8 w-full;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  width: 100%;
 }
 
 .blog-content code {
-  @apply bg-secondary-light px-2 py-0.5 rounded text-sm font-mono;
-  color: var(--accent) !important;
-  background-color: #1f1f1f !important;
+  background-color: #1f1f1f;
+  color: #c9f31d;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: monospace;
+}
+
+.blog-content pre {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.blog-content pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #e5e5e5;
+}
+
+/* Neutralize any inline styles from pasted content */
+.blog-content [style] {
+  color: inherit !important;
+  background-color: transparent !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
 }
