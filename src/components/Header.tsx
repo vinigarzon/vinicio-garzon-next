@@ -37,7 +37,7 @@ export default function Header() {
           <img
             src="/images/logo.png"
             alt="Vinicio Garzón"
-            className="h-9 w-auto opacity-90 group-hover:opacity-100 transition"
+            className="h-11 w-auto opacity-90 group-hover:opacity-100 transition"
           />
         </Link>
 

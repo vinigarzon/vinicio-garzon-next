@@ -25,7 +25,7 @@ export default function Footer() {
               <img
                 src="/images/logo.png"
                 alt="Vinicio Garzón"
-                className="h-12 w-auto opacity-90 hover:opacity-100 transition"
+                className="h-16 w-auto opacity-90 hover:opacity-100 transition"
               />
             </Link>
             <p className="text-text-muted text-base max-w-sm leading-relaxed mb-6">
