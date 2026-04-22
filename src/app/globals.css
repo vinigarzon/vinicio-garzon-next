@@ -224,15 +224,29 @@ a, button {
   color: var(--text-muted) !important;
 }
 
-/* Force override ANY inline color styles from pasted content (Google Docs, web, etc.) */
-.blog-content *,
+/* Force override ANY inline color styles from pasted content (Google Docs, ChatGPT, etc.) */
+/* Using explicit colors instead of 'inherit' to avoid inheriting black from parent spans */
 .blog-content span,
-.blog-content p,
-.blog-content li,
+.blog-content div:not([class]),
 .blog-content td {
-  color: inherit !important;
+  color: #9ca3af !important;
   background-color: transparent !important;
   font-family: inherit !important;
+}
+
+/* Specific overrides for bold/italic inside spans */
+.blog-content span strong,
+.blog-content span b,
+.blog-content p strong,
+.blog-content p b {
+  color: #ffffff !important;
+}
+
+.blog-content span em,
+.blog-content span i,
+.blog-content p em,
+.blog-content p i {
+  color: #9ca3af !important;
 }
 
 .blog-content h2 {
