@@ -4,6 +4,8 @@ import Link from 'next/link';
 import blog from '@/data/blog.json';
 import { notFound } from 'next/navigation';
 import Reveal from '@/components/Reveal';
+import { marked } from 'marked';
+import { useMemo } from 'react';
 
 export default function BlogPostClient({ slug }: { slug: string }) {
   const post = blog.posts.find(p => p.slug === slug);
@@ -11,6 +13,15 @@ export default function BlogPostClient({ slug }: { slug: string }) {
   if (!post) notFound();
 
   const relatedPosts = blog.posts.filter(p => p.slug !== slug).slice(0, 3);
+
+  // Parse markdown to HTML
+  const htmlContent = useMemo(() => {
+    marked.setOptions({
+      breaks: true,
+      gfm: true,
+    });
+    return marked.parse(post.content) as string;
+  }, [post.content]);
 
   return (
     <div className="w-full">
@@ -23,17 +34,20 @@ export default function BlogPostClient({ slug }: { slug: string }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Blog
+            Back to Writings
           </Link>
 
           <Reveal>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-6 flex-wrap">
               <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full font-medium uppercase tracking-wider">
                 {post.category}
               </span>
               <span className="text-xs text-text-dim">
                 {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
               </span>
+              {post.readTime && (
+                <span className="text-xs text-text-dim">· {post.readTime}</span>
+              )}
             </div>
           </Reveal>
 
@@ -48,7 +62,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
               </div>
               <div>
                 <p className="text-text font-medium">By {post.author}</p>
-                <p className="text-text-muted text-sm">Vinicio Garzón</p>
+                <p className="text-text-muted text-sm">Personal & Professional Profile</p>
               </div>
             </div>
           </Reveal>
@@ -60,7 +74,7 @@ export default function BlogPostClient({ slug }: { slug: string }) {
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light">
-              <img src={post.fullImage || post.image} alt={post.title} className="w-full h-full object-cover" />
+              <img src={post.fullImage || post.image} alt={post.title} className="w-full h-full object-cover editorial-filter" />
             </div>
           </Reveal>
         </div>
@@ -70,13 +84,10 @@ export default function BlogPostClient({ slug }: { slug: string }) {
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-3xl mx-auto">
           <Reveal>
-            <article className="space-y-6">
-              {post.content.split('\n\n').map((paragraph, idx) => (
-                <p key={idx} className="text-lg text-text-muted leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
-            </article>
+            <article
+              className="blog-content"
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
           </Reveal>
 
           {/* CTA */}

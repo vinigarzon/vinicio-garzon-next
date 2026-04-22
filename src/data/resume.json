@@ -65,8 +65,8 @@
   ],
   "skills": [
     {"name": "PHOTOSHOP", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/photoshop.png"},
-    {"name": "ILLUSTRATOR", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"},
-    {"name": "INDESIGN", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Adobe_InDesign_CC_icon.svg"},
+    {"name": "ILLUSTRATOR", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/512px-Adobe_Illustrator_CC_icon.svg.png"},
+    {"name": "INDESIGN", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Adobe_InDesign_CC_icon.svg/512px-Adobe_InDesign_CC_icon.svg.png"},
     {"name": "WORDPRESS", "percentage": 98, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/wordpress.png"},
     {"name": "ELEMENTOR", "percentage": 95, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/elementor.png"},
     {"name": "WOOCOMMERCE", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/woocommerce.png"},
@@ -82,12 +82,12 @@
     {"name": "GAMIPRESS", "percentage": 88, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/GamiPress.png"},
     {"name": "ZAPIER", "percentage": 85, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/ZAPIER.png"},
     {"name": "TRELLO", "percentage": 90, "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/TRELLO.png"},
-    {"name": "GITHUB", "percentage": 90, "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"},
-    {"name": "NETLIFY", "percentage": 85, "icon": "https://www.netlify.com/v3/img/components/logomark.png"},
-    {"name": "LOVABLE", "percentage": 95, "icon": "https://lovable.dev/favicon.ico"},
-    {"name": "CLAUDE", "percentage": 90, "icon": "https://claude.ai/favicon.ico"},
-    {"name": "CHATGPT", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"},
-    {"name": "GEMINI", "percentage": 90, "icon": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"}
+    {"name": "GITHUB", "percentage": 90, "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"},
+    {"name": "NETLIFY", "percentage": 85, "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netlify.svg"},
+    {"name": "LOVABLE", "percentage": 95, "icon": "https://lovable.dev/apple-touch-icon.png"},
+    {"name": "CLAUDE", "percentage": 90, "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/claude.svg"},
+    {"name": "CHATGPT", "percentage": 90, "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg"},
+    {"name": "GEMINI", "percentage": 90, "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlegemini.svg"}
   ],
   "services": [
     {

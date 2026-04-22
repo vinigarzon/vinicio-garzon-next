@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   description: 'Personal and professional profile. Professional background in loyalty, rewards, and e-learning across Latin America. Currently pursuing academic studies in Sport Management at North Central College.',
   keywords: 'Vinicio Garzón Castrillón, Sport Management, North Central College, loyalty programs, e-learning, Latin America, Gurumba, Zegendia, Lincoln BizLab',
   authors: [{ name: 'Vinicio Garzón Castrillón' }],
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Vinicio Garzón Castrillón — Personal & Professional Profile',
     description: 'Personal and professional profile. Background in loyalty, rewards, and e-learning. Current academic studies in Sport Management.',

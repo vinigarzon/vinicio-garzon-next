@@ -79,7 +79,7 @@ export default function Home() {
             <div className="md:col-span-5">
               <Reveal delay={200}>
                 <div className="hero-portrait aspect-[4/5] max-w-md mx-auto md:ml-auto md:mr-0">
-                  <img src="/images/vinicio-portrait.jpg" alt="Vinicio Garzón Castrillón" />
+                  <img src="/images/vinicio-portrait.png" alt="Vinicio Garzón Castrillón" />
                 </div>
               </Reveal>
             </div>
