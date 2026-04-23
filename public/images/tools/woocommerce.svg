@@ -1,0 +1,12 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wooGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#96588A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7A4370;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#wooGrad)" rx="8"/>
+  <circle cx="35" cy="40" r="12" fill="#fff"/>
+  <circle cx="65" cy="40" r="12" fill="#fff"/>
+  <path d="M 30 60 L 70 60 Q 70 73 50 73 Q 30 73 30 60" fill="#fff"/>
+</svg>

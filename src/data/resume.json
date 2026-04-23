@@ -67,7 +67,7 @@
     {
       "name": "PHOTOSHOP",
       "percentage": 95,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/photoshop.png"
+      "icon": "/images/tools/photoshop.svg"
     },
     {
       "name": "ILLUSTRATOR",
@@ -82,77 +82,77 @@
     {
       "name": "WORDPRESS",
       "percentage": 98,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/wordpress.png"
+      "icon": "/images/tools/wordpress.svg"
     },
     {
       "name": "ELEMENTOR",
       "percentage": 95,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/elementor.png"
+      "icon": "/images/tools/elementor.svg"
     },
     {
       "name": "WOOCOMMERCE",
       "percentage": 90,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2024/07/woocommerce.png"
+      "icon": "/images/tools/woocommerce.svg"
     },
     {
       "name": "CAPCUT",
       "percentage": 85,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CAPCUT.png"
+      "icon": "/images/tools/capcut.svg"
     },
     {
       "name": "CANVA",
       "percentage": 93,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/CANVA-LOGO.png"
+      "icon": "/images/tools/canva.svg"
     },
     {
       "name": "HUBSPOT",
       "percentage": 88,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/HUBSPOT-LOGO.png"
+      "icon": "/images/tools/hubspot.svg"
     },
     {
       "name": "MAILCHIMP",
       "percentage": 88,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/MAILCHIMP.png"
+      "icon": "/images/tools/mailchimp.svg"
     },
     {
       "name": "GOOGLE ANALYTICS",
       "percentage": 92,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/GOOGLE.png"
+      "icon": "/images/tools/google.svg"
     },
     {
       "name": "META BUSINESS SUITE",
       "percentage": 90,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/META.png"
+      "icon": "/images/tools/meta.svg"
     },
     {
       "name": "TIKTOK",
       "percentage": 82,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/TIKTOK-LOGO.png"
+      "icon": "/images/tools/tiktok.svg"
     },
     {
       "name": "STRIPE",
       "percentage": 85,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/01/STRIPE.png"
+      "icon": "/images/tools/stripe.svg"
     },
     {
       "name": "TUTOR LMS",
       "percentage": 90,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/tutorlms.png"
+      "icon": "/images/tools/tutor-lms.svg"
     },
     {
       "name": "GAMIPRESS",
       "percentage": 88,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/GamiPress.png"
+      "icon": "/images/tools/gamipress.svg"
     },
     {
       "name": "ZAPIER",
       "percentage": 85,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/ZAPIER.png"
+      "icon": "/images/tools/zapier.svg"
     },
     {
       "name": "TRELLO",
       "percentage": 90,
-      "icon": "https://www.viniciogarzon.com/wp-content/uploads/2025/02/TRELLO.png"
+      "icon": "/images/tools/trello.svg"
     },
     {
       "name": "GITHUB",

@@ -5,19 +5,40 @@
       "title": "Lincoln BizLab",
       "category": "Training & Development Initiative",
       "description": "A hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois.",
-      "image": "/images/lincoln-bizlab-building.png",
+      "image": "/images/portfolio/laptop.png",
       "thumbnail": "/images/lincoln-bizlab-building.png",
-      "tags": ["Training Center", "Business Development", "Community Initiative"],
+      "tags": [
+        "Training Center",
+        "Business Development",
+        "Community Initiative"
+      ],
       "client": "Lincoln, Illinois",
       "year": "2024",
-      "deliverables": ["Hybrid Training Programs", "Business Development Resources", "Community Engagement Initiatives"],
-      "achievements": ["Supporting Local Business Growth", "Bridging Academic and Practical Training", "Regional Economic Initiative"],
+      "deliverables": [
+        "Hybrid Training Programs",
+        "Business Development Resources",
+        "Community Engagement Initiatives"
+      ],
+      "achievements": [
+        "Supporting Local Business Growth",
+        "Bridging Academic and Practical Training",
+        "Regional Economic Initiative"
+      ],
       "fullDescription": "Lincoln BizLab is a hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois. The project combines structured training programs, business development resources, and community-oriented activities to support local economic activity. More information is available at lincolnbizlab.com.",
       "website": "https://lincolnbizlab.com/",
       "services": [
-        {"title": "Program Development", "description": "Design of hybrid training programs combining in-person sessions and digital learning resources."},
-        {"title": "Community Partnerships", "description": "Coordination with local organizations and stakeholders to align the initiative with regional needs."},
-        {"title": "Digital Infrastructure", "description": "Implementation of digital platforms and tools that support program delivery, tracking, and engagement."}
+        {
+          "title": "Program Development",
+          "description": "Design of hybrid training programs combining in-person sessions and digital learning resources."
+        },
+        {
+          "title": "Community Partnerships",
+          "description": "Coordination with local organizations and stakeholders to align the initiative with regional needs."
+        },
+        {
+          "title": "Digital Infrastructure",
+          "description": "Implementation of digital platforms and tools that support program delivery, tracking, and engagement."
+        }
       ],
       "gallery": [
         "/images/lincoln-bizlab-building.png",
@@ -25,9 +46,21 @@
         "/images/lincoln/courthouse.jpg"
       ],
       "testimonials": [
-        {"quote": "Lincoln BizLab represents a thoughtful approach to local economic development, combining practical training with community engagement.", "author": "Community Partner", "role": "Lincoln, Illinois"},
-        {"quote": "The hybrid model makes the program accessible to a wider range of participants without compromising quality.", "author": "Program Participant", "role": ""},
-        {"quote": "A useful reference for how small-scale initiatives can bridge academic training and real business development.", "author": "Regional Observer", "role": ""}
+        {
+          "quote": "Lincoln BizLab represents a thoughtful approach to local economic development, combining practical training with community engagement.",
+          "author": "Community Partner",
+          "role": "Lincoln, Illinois"
+        },
+        {
+          "quote": "The hybrid model makes the program accessible to a wider range of participants without compromising quality.",
+          "author": "Program Participant",
+          "role": ""
+        },
+        {
+          "quote": "A useful reference for how small-scale initiatives can bridge academic training and real business development.",
+          "author": "Regional Observer",
+          "role": ""
+        }
       ]
     },
     {
@@ -35,29 +68,62 @@
       "title": "DirecTV Fans",
       "category": "Loyalty Platform",
       "description": "Loyalty program designed to enhance customer engagement and retention.",
-      "image": "/images/portfolio/directv.png",
+      "image": "/images/portfolio/2x1fans.png",
       "thumbnail": "/images/portfolio/directv.png",
-      "tags": ["Loyalty Platform", "Data-Driven", "Rewards System"],
+      "tags": [
+        "Loyalty Platform",
+        "Data-Driven",
+        "Rewards System"
+      ],
       "client": "DirecTV",
       "year": "2014",
-      "deliverables": ["Customer Loyalty Platform", "Personalized Rewards System", "Data-Driven Insights"],
-      "achievements": ["Higher Engagement", "Stronger Loyalty", "Data Personalization"],
+      "deliverables": [
+        "Customer Loyalty Platform",
+        "Personalized Rewards System",
+        "Data-Driven Insights"
+      ],
+      "achievements": [
+        "Higher Engagement",
+        "Stronger Loyalty",
+        "Data Personalization"
+      ],
       "fullDescription": "Vinicio led the successful implementation of DirecTV Fans, a loyalty program designed to enhance customer engagement and retention. By integrating gamification and personalized rewards, the program significantly increased fan interaction and brand loyalty. Customers enjoyed exclusive experiences, benefits, and personalized offers, leading to a substantial boost in brand affinity and repeat subscriptions.",
       "services": [
-        {"title": "Loyalty Program Leadership", "description": "Directed the creation of a tailored rewards system to drive customer retention."},
-        {"title": "Data-Driven Personalization", "description": "Leveraged analytics to customize offers and enhance user experience."},
-        {"title": "Gamification Strategies", "description": "Implemented interactive elements to boost engagement and strengthen brand loyalty."}
+        {
+          "title": "Loyalty Program Leadership",
+          "description": "Directed the creation of a tailored rewards system to drive customer retention."
+        },
+        {
+          "title": "Data-Driven Personalization",
+          "description": "Leveraged analytics to customize offers and enhance user experience."
+        },
+        {
+          "title": "Gamification Strategies",
+          "description": "Implemented interactive elements to boost engagement and strengthen brand loyalty."
+        }
       ],
       "gallery": [
-        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/directv.png",
-        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/laptop.png",
-        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/2x1fans.png",
-        "https://www.viniciogarzon.com/wp-content/uploads/2024/07/tv-control.png"
+        "/images/portfolio/directv.png",
+        "/images/portfolio/laptop.png",
+        "/images/portfolio/2x1fans.png",
+        "/images/portfolio/tv-control.png"
       ],
       "testimonials": [
-        {"quote": "Loyalty isn't just about points and rewards; it's about creating meaningful connections that turn customers into lifelong advocates.", "author": "Vinicio Garzón", "role": "CEO Zegendia"},
-        {"quote": "The DirecTV Fans program redefined how we connect with our audience. Thanks to Vinicio's leadership, we transformed customer engagement into a dynamic and rewarding experience.", "author": "DirecTV Fans", "role": ""},
-        {"quote": "Vinicio's vision and strategic approach helped us unlock the true potential of loyalty programs. The data-driven insights provided a new level of personalization that resonated with our customers.", "author": "DirecTV", "role": ""}
+        {
+          "quote": "Loyalty isn't just about points and rewards; it's about creating meaningful connections that turn customers into lifelong advocates.",
+          "author": "Vinicio Garzón",
+          "role": "CEO Zegendia"
+        },
+        {
+          "quote": "The DirecTV Fans program redefined how we connect with our audience. Thanks to Vinicio's leadership, we transformed customer engagement into a dynamic and rewarding experience.",
+          "author": "DirecTV Fans",
+          "role": ""
+        },
+        {
+          "quote": "Vinicio's vision and strategic approach helped us unlock the true potential of loyalty programs. The data-driven insights provided a new level of personalization that resonated with our customers.",
+          "author": "DirecTV",
+          "role": ""
+        }
       ]
     },
     {
@@ -67,16 +133,37 @@
       "description": "An innovative e-learning platform empowering entrepreneurs and small businesses.",
       "image": "/images/portfolio/gurumba.png",
       "thumbnail": "/images/portfolio/gurumba.png",
-      "tags": ["E-Learning", "Entrepreneurship", "Education"],
+      "tags": [
+        "E-Learning",
+        "Entrepreneurship",
+        "Education"
+      ],
       "client": "Gurumba.com",
       "year": "2022",
-      "deliverables": ["E-Learning Platform", "Course Management System", "Community Features"],
-      "achievements": ["Empowering Entrepreneurs", "Transformative Education", "Innovative Learning Solutions"],
+      "deliverables": [
+        "E-Learning Platform",
+        "Course Management System",
+        "Community Features"
+      ],
+      "achievements": [
+        "Empowering Entrepreneurs",
+        "Transformative Education",
+        "Innovative Learning Solutions"
+      ],
       "fullDescription": "Leading Gurumba.com, an e-learning platform dedicated to empowering entrepreneurs and small businesses in Latin America. The platform provides the tools and knowledge necessary for leaders to innovate and achieve success.",
       "services": [
-        {"title": "Platform Development", "description": "Built a comprehensive e-learning ecosystem for Latin American entrepreneurs."},
-        {"title": "Content Strategy", "description": "Curated educational content tailored to small business needs."},
-        {"title": "Community Building", "description": "Fostered a vibrant community of learners and mentors."}
+        {
+          "title": "Platform Development",
+          "description": "Built a comprehensive e-learning ecosystem for Latin American entrepreneurs."
+        },
+        {
+          "title": "Content Strategy",
+          "description": "Curated educational content tailored to small business needs."
+        },
+        {
+          "title": "Community Building",
+          "description": "Fostered a vibrant community of learners and mentors."
+        }
       ],
       "gallery": [],
       "testimonials": []
@@ -88,11 +175,23 @@
       "description": "A comprehensive fulfillment solution for loyalty and rewards programs.",
       "image": "/images/portfolio/programas.jpg",
       "thumbnail": "/images/portfolio/programas.jpg",
-      "tags": ["Fulfillment", "Rewards Distribution", "Logistics"],
+      "tags": [
+        "Fulfillment",
+        "Rewards Distribution",
+        "Logistics"
+      ],
       "client": "Multiple Clients",
       "year": "2020",
-      "deliverables": ["Fulfillment Platform", "Logistics Management", "Reward Distribution System"],
-      "achievements": ["Efficient Distribution", "Customer Satisfaction", "Scalable Solutions"],
+      "deliverables": [
+        "Fulfillment Platform",
+        "Logistics Management",
+        "Reward Distribution System"
+      ],
+      "achievements": [
+        "Efficient Distribution",
+        "Customer Satisfaction",
+        "Scalable Solutions"
+      ],
       "fullDescription": "PrograMAS is a fulfillment platform designed to efficiently distribute rewards and manage logistics across Latin America.",
       "services": [],
       "gallery": [],
@@ -105,11 +204,23 @@
       "description": "A rewards program for one of Ecuador's leading newspapers.",
       "image": "/images/portfolio/comercio.jpg",
       "thumbnail": "/images/portfolio/comercio.jpg",
-      "tags": ["Rewards Club", "Media", "Customer Retention"],
+      "tags": [
+        "Rewards Club",
+        "Media",
+        "Customer Retention"
+      ],
       "client": "Diario El Comercio",
       "year": "2018",
-      "deliverables": ["Rewards Club Platform", "Subscriber Benefits System", "Digital Engagement Tools"],
-      "achievements": ["Increased Subscriptions", "Higher Engagement", "Reader Loyalty"],
+      "deliverables": [
+        "Rewards Club Platform",
+        "Subscriber Benefits System",
+        "Digital Engagement Tools"
+      ],
+      "achievements": [
+        "Increased Subscriptions",
+        "Higher Engagement",
+        "Reader Loyalty"
+      ],
       "fullDescription": "A comprehensive rewards club designed to enhance reader loyalty and drive subscription growth for Ecuador's premier newspaper.",
       "services": [],
       "gallery": [],
@@ -122,11 +233,23 @@
       "description": "A loyalty system for a popular restaurant chain across Latin America.",
       "image": "/images/portfolio/cebichomano.png",
       "thumbnail": "/images/portfolio/cebichomano.png",
-      "tags": ["Food & Beverage", "Loyalty", "Customer Experience"],
+      "tags": [
+        "Food & Beverage",
+        "Loyalty",
+        "Customer Experience"
+      ],
       "client": "Cebichomano",
       "year": "2019",
-      "deliverables": ["Loyalty System", "Customer Experience Design", "Mobile Integration"],
-      "achievements": ["Repeat Visits", "Customer Lifetime Value", "Brand Advocacy"],
+      "deliverables": [
+        "Loyalty System",
+        "Customer Experience Design",
+        "Mobile Integration"
+      ],
+      "achievements": [
+        "Repeat Visits",
+        "Customer Lifetime Value",
+        "Brand Advocacy"
+      ],
       "fullDescription": "A sophisticated loyalty system designed to drive repeat visits and increase customer lifetime value for a successful restaurant brand.",
       "services": [],
       "gallery": [],
@@ -139,11 +262,23 @@
       "description": "An employee rewards program with exclusive benefits.",
       "image": "/images/portfolio/tarjetagpf.png",
       "thumbnail": "/images/portfolio/tarjetagpf.png",
-      "tags": ["Employee Benefits", "Rewards", "Corporate"],
+      "tags": [
+        "Employee Benefits",
+        "Rewards",
+        "Corporate"
+      ],
       "client": "Tarjeta GPF",
       "year": "2017",
-      "deliverables": ["Employee Rewards Platform", "Benefits Management", "Card System Integration"],
-      "achievements": ["Employee Satisfaction", "Program Adoption", "Financial Inclusion"],
+      "deliverables": [
+        "Employee Rewards Platform",
+        "Benefits Management",
+        "Card System Integration"
+      ],
+      "achievements": [
+        "Employee Satisfaction",
+        "Program Adoption",
+        "Financial Inclusion"
+      ],
       "fullDescription": "A comprehensive employee rewards program that provides members with exclusive benefits and rewards.",
       "services": [],
       "gallery": [],

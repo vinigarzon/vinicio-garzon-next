@@ -124,7 +124,7 @@ export default function Home() {
               <Reveal delay={200}>
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden group">
                   <img
-                    src="https://www.viniciogarzon.com/wp-content/uploads/2025/01/naperville.jpg"
+                    src="/images/naperville.jpg"
                     alt="Naperville"
                     className="w-full h-full object-cover naperville-img"
                   />
