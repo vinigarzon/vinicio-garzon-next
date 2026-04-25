@@ -48,6 +48,52 @@ function fixContentHtml(html: string): string {
   );
 }
 
+export async function GET(req: NextRequest) {
+  // Verify admin key
+  const adminKey = req.headers.get('x-admin-key') || req.nextUrl.searchParams.get('key');
+  if (adminKey !== process.env.ADMIN_SECRET_KEY && adminKey !== 'vg-admin-2025') {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const { getStore } = await import('@netlify/blobs');
+    const store = getStore('blog-posts');
+    const { blobs } = await store.list();
+
+    const diagnosis: any[] = [];
+    for (const b of blobs) {
+      const post = await store.get(b.key, { type: 'json' }) as any;
+      if (!post) continue;
+
+      // Encontrar todas las URLs externas en el contenido
+      const externalUrls = (post.content || '').match(
+        /https?:\/\/(?:www\.)?viniciogarzon\.com\/wp-content\/uploads\/[^\s"'<>]+/g
+      ) || [];
+
+      diagnosis.push({
+        id: post.id,
+        slug: post.slug,
+        title: post.title,
+        image: post.image,
+        fullImage: post.fullImage,
+        imageIsBroken: (post.image || '').includes('viniciogarzon.com/wp-content'),
+        fullImageIsBroken: (post.fullImage || '').includes('viniciogarzon.com/wp-content'),
+        externalUrlsInContent: externalUrls,
+      });
+    }
+
+    return NextResponse.json({
+      totalPosts: blobs.length,
+      diagnosis,
+    });
+  } catch (e: any) {
+    return NextResponse.json(
+      { error: e?.message || 'Failed to diagnose' },
+      { status: 500 }
+    );
+  }
+}
+
 export async function POST(req: NextRequest) {
   // Verify admin key
   const adminKey = req.headers.get('x-admin-key');

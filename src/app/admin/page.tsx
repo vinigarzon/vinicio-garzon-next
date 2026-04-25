@@ -70,6 +70,35 @@ export default function AdminDashboard() {
     } else alert('Error: ' + d.error);
   };
 
+  const diagnoseImages = async () => {
+    const r = await fetch('/api/blog/fix-images', { method: 'GET', headers: { 'x-admin-key': KEY } });
+    const d = await r.json();
+    if (d.diagnosis) {
+      let report = `📊 Diagnosis (${d.totalPosts} posts):\n\n`;
+      d.diagnosis.forEach((p: any) => {
+        report += `━━━━━━━━━━━━━━━━━━━━\n`;
+        report += `📄 ${p.slug}\n`;
+        report += `image: ${p.imageIsBroken ? '❌ BROKEN' : '✅ OK'}\n`;
+        report += `  → ${p.image || '(empty)'}\n`;
+        if (p.externalUrlsInContent.length > 0) {
+          report += `Content has ${p.externalUrlsInContent.length} external URLs:\n`;
+          p.externalUrlsInContent.forEach((u: string) => {
+            report += `  • ${u.substring(0, 80)}${u.length > 80 ? '...' : ''}\n`;
+          });
+        }
+        report += `\n`;
+      });
+      // Show in a new window since alert truncates
+      const w = window.open('', '_blank', 'width=900,height=700');
+      if (w) {
+        w.document.write(`<pre style="font-family: monospace; font-size: 12px; background: #111; color: #c9f31d; padding: 20px; white-space: pre-wrap;">${report}</pre>`);
+      } else {
+        console.log(report);
+        alert('Check console for full diagnosis (popup was blocked)');
+      }
+    } else alert('Error: ' + d.error);
+  };
+
   const cnt = { all: posts.length, published: posts.filter(p => p.status === 'published').length, draft: posts.filter(p => p.status === 'draft').length, scheduled: posts.filter(p => p.status === 'scheduled').length };
   const vis = posts.filter(p => (filter === 'all' || p.status === filter) && (!q || p.title.toLowerCase().includes(q.toLowerCase())));
 
@@ -158,10 +187,16 @@ export default function AdminDashboard() {
             <p className="text-gray-300 text-sm font-medium">Fix broken image URLs</p>
             <p className="text-gray-500 text-xs mt-0.5">Rewrites old viniciogarzon.com/wp-content URLs in posts to local paths</p>
           </div>
-          <button onClick={fixImages}
-            className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition shrink-0">
-            🖼 Fix Images
-          </button>
+          <div className="flex gap-2 shrink-0">
+            <button onClick={diagnoseImages}
+              className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition">
+              🔍 Diagnose
+            </button>
+            <button onClick={fixImages}
+              className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition">
+              🖼 Fix Images
+            </button>
+          </div>
         </div>
       )}
     </div>
