@@ -3,12 +3,13 @@ import { notFound } from 'next/navigation';
 import Reveal from '@/components/Reveal';
 import { getPublishedPosts, getPostBySlug } from '@/lib/blog-store';
 
-export const revalidate = 60;
-export const dynamicParams = true; // Allow new slugs not in generateStaticParams
+// Force dynamic rendering on every request - ensures image updates show immediately
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  try { return (await getPublishedPosts()).map(p => ({ slug: p.slug })); }
-  catch { return []; }
+  return []; // Don't pre-generate - render on demand
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -47,7 +48,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       {post.image && (
         <section className="px-4 sm:px-6 lg:px-8 bg-primary">
           <div className="max-w-5xl mx-auto">
-            <Reveal><div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light"><img src={post.fullImage||post.image} alt={post.title} className="w-full h-full object-cover"/></div></Reveal>
+            <Reveal><div className="aspect-[16/9] rounded-2xl overflow-hidden bg-secondary-light"><img src={`${post.fullImage||post.image}${(post.fullImage||post.image).includes('?') ? '&' : '?'}v=${new Date(post.updatedAt||post.date).getTime()}`} alt={post.title} className="w-full h-full object-cover"/></div></Reveal>
           </div>
         </section>
       )}

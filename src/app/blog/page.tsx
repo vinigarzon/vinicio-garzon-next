@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import { getPublishedPosts } from '@/lib/blog-store';
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default async function BlogPage() {
   const posts = await getPublishedPosts();
@@ -49,7 +50,7 @@ export default async function BlogPage() {
                     <Link href={`/blog/${post.slug}`} className="block group">
                       <article className="card h-full overflow-hidden p-0">
                         <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                          {post.image ? <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group" />
+                          {post.image ? <img src={`${post.image}${post.image.includes('?') ? '&' : '?'}v=${new Date(post.updatedAt||post.date).getTime()}`} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 editorial-filter-group" />
                             : <div className="w-full h-full bg-secondary-light flex items-center justify-center text-4xl opacity-20">✍</div>}
                         </div>
                         <div className="p-6">

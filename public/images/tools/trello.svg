@@ -1,11 +1,1 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="trelloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0079BF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#006AA3;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" fill="url(#trelloGrad)" rx="8"/>
-  <rect x="23" y="28" width="28" height="48" fill="#fff" rx="3"/>
-  <rect x="57" y="20" width="28" height="56" fill="#fff" rx="3"/>
-</svg>
+<svg width="2500" height="2500" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a"><stop stop-color="#0091E6" offset="0%"/><stop stop-color="#0079BF" offset="100%"/></linearGradient></defs><rect fill="url(#a)" width="256" height="256" rx="25"/><rect fill="#FFF" x="144.64" y="33.28" width="78.08" height="112" rx="12"/><rect fill="#FFF" x="33.28" y="33.28" width="78.08" height="176" rx="12"/></svg>
