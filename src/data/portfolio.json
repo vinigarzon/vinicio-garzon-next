@@ -5,7 +5,7 @@
       "title": "Lincoln BizLab",
       "category": "Training & Development Initiative",
       "description": "A hybrid training center and development initiative focused on economic and business growth in Lincoln, Illinois.",
-      "image": "/images/portfolio/laptop.png",
+      "image": "/images/lincoln-bizlab-building.png",
       "thumbnail": "/images/lincoln-bizlab-building.png",
       "tags": [
         "Training Center",
@@ -41,7 +41,7 @@
         }
       ],
       "gallery": [
-        "/images/lincoln-bizlab-building.png",
+        "/images/portfolio/laptop.png",
         "/images/lincoln/downtown.jpg",
         "/images/lincoln/courthouse.jpg"
       ],
@@ -68,7 +68,7 @@
       "title": "DirecTV Fans",
       "category": "Loyalty Platform",
       "description": "Loyalty program designed to enhance customer engagement and retention.",
-      "image": "/images/portfolio/2x1fans.png",
+      "image": "/images/portfolio/directv.png",
       "thumbnail": "/images/portfolio/directv.png",
       "tags": [
         "Loyalty Platform",
@@ -103,9 +103,8 @@
         }
       ],
       "gallery": [
-        "/images/portfolio/directv.png",
-        "/images/portfolio/laptop.png",
         "/images/portfolio/2x1fans.png",
+        "/images/portfolio/laptop.png",
         "/images/portfolio/tv-control.png"
       ],
       "testimonials": [
