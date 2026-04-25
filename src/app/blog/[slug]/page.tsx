@@ -55,7 +55,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-primary">
         <div className="max-w-3xl mx-auto">
-          <Reveal><article className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }}/></Reveal>
+          <article className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }}/>
           {post.tags && post.tags.length > 0 && (
             <Reveal><div className="flex flex-wrap gap-2 mt-12 pt-8 border-t border-border">{post.tags.map(t=><span key={t} className="text-xs bg-secondary text-text-muted px-3 py-1 rounded-full border border-border">#{t}</span>)}</div></Reveal>
           )}

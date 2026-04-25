@@ -367,70 +367,7 @@ a, button {
   color: #e5e5e5;
 }
 
-/* ========================================
-   NUCLEAR OVERRIDE — guarantees text is always visible
-   No matter what styles get pasted from ChatGPT, Word, Docs, etc.
-   ======================================== */
-.blog-content,
-.blog-content * {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-.blog-content,
-.blog-content p,
-.blog-content li,
-.blog-content span,
-.blog-content div,
-.blog-content section,
-.blog-content article {
-  color: #9a9a9a !important;
-}
-
-.blog-content h1,
-.blog-content h2,
-.blog-content h3,
-.blog-content h4,
-.blog-content h5,
-.blog-content h6,
-.blog-content strong,
-.blog-content b {
-  color: #ffffff !important;
-}
-
-.blog-content a {
-  color: #c9f31d !important;
-}
-
-.blog-content em,
-.blog-content i {
-  color: inherit !important;
-}
-
-/* Blockquote keeps its slightly tinted background */
-.blog-content blockquote {
-  background-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-.blog-content blockquote p {
-  color: #e5e5e5 !important;
-}
-
-.blog-content code {
-  background-color: #1f1f1f !important;
-  color: #c9f31d !important;
-}
-
-.blog-content pre {
-  background-color: #1a1a1a !important;
-}
-
-.blog-content pre code {
-  background: none !important;
-  color: #e5e5e5 !important;
-}
-
-/* Neutralize ALL inline styles */
+/* Neutralize any inline styles from pasted content (ChatGPT, Word, Google Docs) */
 .blog-content [style] {
   color: inherit !important;
   background-color: transparent !important;
@@ -439,7 +376,7 @@ a, button {
   font-size: inherit !important;
 }
 
-/* Force strong/b inside any inline style to stay white */
+/* Strong/b inside inline-styled elements stay white */
 .blog-content [style] strong,
 .blog-content [style] b,
 .blog-content strong[style],

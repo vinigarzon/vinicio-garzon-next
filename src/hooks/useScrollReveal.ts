@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(threshold = 0.15) {
+export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(threshold = 0) {
   const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -10,10 +10,15 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(threshol
     const el = ref.current;
     if (!el) return;
 
+    // Fallback: ensure content is always visible after 1s, even if observer never fires
+    // (this prevents content disappearing on tall elements where threshold can't be met)
+    const fallback = setTimeout(() => setIsVisible(true), 1000);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          clearTimeout(fallback);
           observer.unobserve(el);
         }
       },
@@ -21,7 +26,10 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(threshol
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallback);
+      observer.disconnect();
+    };
   }, [threshold]);
 
   return { ref, isVisible };
