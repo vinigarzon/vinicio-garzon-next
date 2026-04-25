@@ -38,7 +38,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <Reveal delay={100}><h1 className="mb-6">{post.title}</h1></Reveal>
           <Reveal delay={200}>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-display font-bold text-primary text-lg">V</div>
+              <div className="w-12 h-12 rounded-full bg-primary border-2 border-accent flex items-center justify-center overflow-hidden p-1.5">
+                <img src="/images/logo.png" alt="VG" className="w-full h-full object-contain" />
+              </div>
               <div><p className="text-text font-medium">{post.author}</p><p className="text-text-muted text-sm">Personal & Professional Profile</p></div>
             </div>
           </Reveal>
