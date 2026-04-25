@@ -290,36 +290,67 @@ export default function Home() {
             </Reveal>
             <Reveal delay={100}>
               <h2 className="max-w-4xl mx-auto">
-                Experience, <span className="text-accent">education</span>, and current studies.
+                Experience, <span className="text-accent">education</span>, and U.S. campus journey.
               </h2>
             </Reveal>
           </div>
 
-          {/* Current Studies */}
-          <div className="mb-20">
-            <Reveal>
-              <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
-                <span className="w-10 h-px bg-accent" />
-                Current Studies
-              </h3>
-            </Reveal>
+          {/* U.S. Campus Experience + Current Studies — Grid 2 columns */}
+          <div className="grid md:grid-cols-2 gap-6 mb-20">
+            {/* U.S. Campus Experience (Left) */}
+            <div>
+              <Reveal>
+                <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
+                  <span className="w-10 h-px bg-accent" />
+                  U.S. Campus Experience
+                </h3>
+              </Reveal>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {resume.currentStudies.map((item, idx) => (
-                <Reveal key={item.number} delay={idx * 100}>
-                  <div className="card border-accent/40">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
-                      <p className="text-accent text-sm font-medium uppercase tracking-wider">
-                        {item.period}
-                      </p>
+              <div className="space-y-6">
+                {resume.usCampus.map((item, idx) => (
+                  <Reveal key={item.number} delay={idx * 100}>
+                    <div className="card border-accent/40">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
+                        <p className="text-accent text-sm font-medium uppercase tracking-wider">
+                          {item.period}
+                        </p>
+                      </div>
+                      <h4 className="text-xl font-display font-bold mb-1">{item.title}</h4>
+                      <p className="text-text-muted text-sm mb-3 font-medium">{item.institution}</p>
+                      <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
                     </div>
-                    <h4 className="text-xl font-display font-bold mb-1">{item.title}</h4>
-                    <p className="text-text-muted text-sm mb-3 font-medium">{item.institution}</p>
-                    <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+
+            {/* Current Studies (Right) */}
+            <div>
+              <Reveal>
+                <h3 className="text-2xl font-display font-bold mb-10 flex items-center gap-3">
+                  <span className="w-10 h-px bg-accent" />
+                  Current Studies
+                </h3>
+              </Reveal>
+
+              <div className="space-y-6">
+                {resume.currentStudies.map((item, idx) => (
+                  <Reveal key={item.number} delay={idx * 100}>
+                    <div className="card border-accent/40">
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="inline-block w-2 h-2 rounded-full bg-accent animate-pulse" />
+                        <p className="text-accent text-sm font-medium uppercase tracking-wider">
+                          {item.period}
+                        </p>
+                      </div>
+                      <h4 className="text-xl font-display font-bold mb-1">{item.title}</h4>
+                      <p className="text-text-muted text-sm mb-3 font-medium">{item.institution}</p>
+                      <p className="text-text-muted text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </div>
 

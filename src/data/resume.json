@@ -2,31 +2,33 @@
   "experience": [
     {
       "number": "1",
-      "period": "2026 - Present",
-      "title": "Student Worker – Digital Strategy & Communications",
-      "company": "North Central College | Naperville, IL",
-      "description": "U.S. Campus Experience — English Language Institute & Language Resource Center. Apply marketing, digital transformation, and educational platform experience to support digital communication projects, including social media strategy, institutional video content, website restructuring, landing page concepts, and AI-assisted communication tools."
-    },
-    {
-      "number": "2",
       "period": "2022 - Now",
       "title": "Founder & Equity Partner",
       "company": "Gurumba.com",
       "description": "Founded and conceptualized Gurumba.com, an e-learning platform for entrepreneurs in Latin America. Led its initial vision, strategy, and educational model. Currently remain involved only as a partner, not in daily operations."
     },
     {
-      "number": "3",
+      "number": "2",
       "period": "2006 - 2022",
       "title": "Founder & CEO",
       "company": "Zegendia",
       "description": "Led Zegendia, a company specialized in loyalty and rewards programs across Latin America, overseeing strategy, operations, and long-term client engagement initiatives."
     },
     {
-      "number": "4",
+      "number": "3",
       "period": "2003 - 2005",
       "title": "National Sales Manager",
       "company": "ANETA (Automóvil Club del Ecuador)",
       "description": "Managed nationwide sales operations, coordinating member-related programs and service strategies across a national network."
+    }
+  ],
+  "usCampus": [
+    {
+      "number": "1",
+      "period": "2025 - Present",
+      "title": "Student Worker – Digital Strategy & Communications",
+      "institution": "English Language Institute & Language Resource Center | North Central College",
+      "description": "Apply marketing, digital transformation, and educational platform experience to support digital communication projects, including social media strategy, institutional video content, website restructuring, landing page concepts, and AI-assisted communication tools."
     }
   ],
   "currentStudies": [

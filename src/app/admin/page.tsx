@@ -57,6 +57,19 @@ export default function AdminDashboard() {
     } else alert('Error: ' + d.error);
   };
 
+  const fixImages = async () => {
+    if (!confirm('This will rewrite all old WordPress image URLs in posts to local paths. Continue?')) return;
+    const r = await fetch('/api/blog/fix-images', { method: 'POST', headers: { 'x-admin-key': KEY } });
+    const d = await r.json();
+    if (d.success) {
+      const fixed = d.results.filter((x: any) => !x.skipped).map((x: any) => x.slug);
+      alert(d.totalFixed > 0
+        ? `✓ Fixed ${d.totalFixed} posts:\n${fixed.join('\n')}\n\nRefresh the blog pages to see changes.`
+        : 'All posts already have correct image URLs!');
+      load();
+    } else alert('Error: ' + d.error);
+  };
+
   const cnt = { all: posts.length, published: posts.filter(p => p.status === 'published').length, draft: posts.filter(p => p.status === 'draft').length, scheduled: posts.filter(p => p.status === 'scheduled').length };
   const vis = posts.filter(p => (filter === 'all' || p.status === filter) && (!q || p.title.toLowerCase().includes(q.toLowerCase())));
 
@@ -134,6 +147,20 @@ export default function AdminDashboard() {
           <button onClick={sanitize}
             className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition shrink-0">
             🧹 Fix Styling
+          </button>
+        </div>
+      )}
+
+      {/* Fix broken image URLs from old WordPress site */}
+      {posts.length > 0 && (
+        <div className="mt-4 p-4 bg-[#111] border border-[#222] rounded-xl flex items-center justify-between">
+          <div>
+            <p className="text-gray-300 text-sm font-medium">Fix broken image URLs</p>
+            <p className="text-gray-500 text-xs mt-0.5">Rewrites old viniciogarzon.com/wp-content URLs in posts to local paths</p>
+          </div>
+          <button onClick={fixImages}
+            className="px-4 py-2 bg-[#1a1a1a] border border-[#444] text-gray-300 rounded-lg text-sm hover:border-[#c9f31d] hover:text-[#c9f31d] transition shrink-0">
+            🖼 Fix Images
           </button>
         </div>
       )}
