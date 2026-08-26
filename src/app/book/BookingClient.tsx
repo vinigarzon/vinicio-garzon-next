@@ -41,6 +41,7 @@ export default function BookingClient({ lang, ready, title, intro, hostName, dur
   const [form, setForm] = useState({ name: '', email: '', notes: '', company: '' });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [blocked, setBlocked] = useState<'closed' | 'error' | null>(null);
   const [done, setDone] = useState<Confirmed | null>(null);
 
   // Timezone del visitante: la detectamos, pero puede cambiarla.
@@ -72,13 +73,22 @@ export default function BookingClient({ lang, ready, title, intro, hostName, dur
       `/api/book/availability?duration=${duration}&tz=${encodeURIComponent(tz)}&from=${from}&to=${to}`,
       { signal: controller.signal }
     )
-      .then((r) => r.json())
-      .then((data) => {
-        setDays(data.days ?? {});
+      .then(async (r) => ({ status: r.status, data: await r.json().catch(() => ({})) }))
+      .then(({ status, data }) => {
+        // Un fallo de infraestructura no puede disfrazarse de "no hay horarios":
+        // son cosas distintas y el visitante merece saber cuál es.
+        if (status >= 500 || data?.ready === false) {
+          setBlocked(status >= 500 ? 'error' : 'closed');
+          setDays({});
+        } else {
+          setBlocked(null);
+          setDays(data.days ?? {});
+        }
         setLoading(false);
       })
       .catch((e) => {
         if (e.name !== 'AbortError') {
+          setBlocked('error');
           setDays({});
           setLoading(false);
         }
@@ -349,7 +359,14 @@ export default function BookingClient({ lang, ready, title, intro, hostName, dur
                     </div>
 
                     {loading && <p className="text-text-dim text-sm mt-4">{T.loading}</p>}
-                    {!loading && !monthHasSlots && <p className="text-text-dim text-sm mt-4">{T.noSlotsMonth}</p>}
+                    {!loading && blocked && (
+                      <p className="text-amber-400/90 text-sm mt-4">
+                        {blocked === 'error' ? T.errUnavailable : T.errClosed}
+                      </p>
+                    )}
+                    {!loading && !blocked && !monthHasSlots && (
+                      <p className="text-text-dim text-sm mt-4">{T.noSlotsMonth}</p>
+                    )}
                   </div>
 
                   {/* Horarios */}

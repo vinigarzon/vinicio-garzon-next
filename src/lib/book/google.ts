@@ -2,7 +2,7 @@
 // `googleapis` a propósito: pesa decenas de MB y esto corre en funciones serverless.
 
 import { bookEnv, googleRedirectUri } from './env';
-import { getGoogleAccount, saveGoogleAccount } from './store';
+import { getGoogleAccount, updateGoogleTokens } from './store';
 import type { Interval } from './types';
 
 export const GOOGLE_SCOPES = [
@@ -82,7 +82,15 @@ export async function getAccessToken(): Promise<{ token: string; calendarId: str
 
   const fresh = await refresh(acc.refresh_token);
   const expires_at = new Date(Date.now() + fresh.expires_in * 1000).toISOString();
-  await saveGoogleAccount({ access_token: fresh.access_token, expires_at });
+
+  // Guardar el token es una optimización, no un requisito: si la base falla,
+  // ya tenemos un token válido en la mano y la petición debe seguir su curso.
+  try {
+    await updateGoogleTokens({ access_token: fresh.access_token, expires_at });
+  } catch (e) {
+    console.error('[book] no se pudo guardar el access token, sigo con el recién obtenido', e);
+  }
+
   return { token: fresh.access_token, calendarId: acc.calendar_id || 'primary' };
 }
 

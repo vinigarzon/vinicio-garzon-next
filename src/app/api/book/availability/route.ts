@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { loadContext, slotsFor } from '@/lib/book/service';
 import { isValidTimeZone } from '@/lib/book/time';
 import { BookConfigError } from '@/lib/book/store';
+import { GoogleApiError, GoogleNotConnectedError } from '@/lib/book/google';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -34,6 +35,12 @@ export async function GET(req: NextRequest) {
   } catch (e) {
     if (e instanceof BookConfigError) {
       return NextResponse.json({ ready: false, days: {}, error: 'not_configured' }, { status: 200 });
+    }
+    // Si Google rechaza la autorización, la página debe decir "cerrado", no
+    // quedarse en blanco fingiendo que no quedan horarios.
+    if (e instanceof GoogleApiError || e instanceof GoogleNotConnectedError) {
+      console.error('[book] availability: Google rechazó la petición', e);
+      return NextResponse.json({ ready: false, days: {}, error: 'calendar' }, { status: 200 });
     }
     console.error('[book] availability', e);
     return NextResponse.json({ error: 'server_error' }, { status: 500 });

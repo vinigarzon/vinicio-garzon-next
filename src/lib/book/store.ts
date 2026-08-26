@@ -249,10 +249,25 @@ export async function getGoogleAccount(): Promise<GoogleAccount | null> {
   return (data as GoogleAccount) ?? null;
 }
 
-export async function saveGoogleAccount(acc: Partial<GoogleAccount>) {
+/**
+ * Guarda la cuenta completa. Solo para el callback de OAuth, que sí tiene todos
+ * los campos: un upsert de PostgREST escribe la fila entera, así que cualquier
+ * columna ausente se iría a NULL.
+ */
+export async function saveGoogleAccount(acc: Partial<GoogleAccount> & { refresh_token: string }) {
   const { error } = await db()
     .from('book_google_account')
     .upsert({ id: 1, ...acc });
+  if (error) throw error;
+}
+
+/**
+ * Actualiza solo el access token y su vencimiento. Tiene que ser UPDATE y no
+ * upsert: con upsert, las columnas que no van en el payload —refresh_token
+ * entre ellas— se reescriben a NULL y la fila deja de ser válida.
+ */
+export async function updateGoogleTokens(patch: { access_token: string; expires_at: string }) {
+  const { error } = await db().from('book_google_account').update(patch).eq('id', 1);
   if (error) throw error;
 }
 
