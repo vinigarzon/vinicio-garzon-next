@@ -18,3 +18,9 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Funciones propias del sitio. "netlify/functions" ya es el valor por defecto;
+# se declara explícito para que el latido diario del módulo de reservas no deje
+# de registrarse en silencio si algún día cambia el default.
+[functions]
+  directory = "netlify/functions"

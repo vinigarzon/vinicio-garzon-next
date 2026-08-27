@@ -57,9 +57,11 @@ Nada más.
    invitación de Google sale), pero no salen los correos con tu marca.
 5. **Admin.** Entrar a `/book/admin`, conectar Google Calendar, pegar el link de Zoom y definir el
    horario semanal.
-6. **Keep-alive.** Los proyectos gratuitos de Supabase se pausan tras ~7 días sin actividad. Programar
-   un GET diario a `https://www.viniciogarzon.com/api/book/ping` (por ejemplo con cron-job.org) para
-   que el link nunca amanezca caído.
+6. **Keep-alive.** Ya viene resuelto dentro del repo: `netlify/functions/book-keepalive.mjs` es una
+   función programada de Netlify que cada día llama a `/api/book/ping`, con lo que la base no se
+   duerme y el token de Google se refresca. Si el chequeo falla, manda un correo de aviso a
+   `BOOK_HOST_EMAIL` explicando qué está roto. No hace falta ningún servicio externo.
+   Se confirma que quedó registrada en Netlify → Functions → Scheduled functions.
 
 ## Comandos
 
