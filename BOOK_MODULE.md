@@ -63,6 +63,24 @@ Nada más.
    `BOOK_HOST_EMAIL` explicando qué está roto. No hace falta ningún servicio externo.
    Se confirma que quedó registrada en Netlify → Functions → Scheduled functions.
 
+
+## Qué puede caducar (y qué no)
+
+| Cosa | Caduca | Cubierto por |
+|---|---|---|
+| Proyecto Supabase gratuito | se **pausa** a los ~7 días sin actividad | el latido diario |
+| Llave `service_role` de Supabase | 2036-08-22 (10 años) | nada que hacer |
+| Llaves JWT heredadas de Supabase | **Supabase las deprecia a fin de 2026** | ver abajo |
+| Refresh token de Google | no caduca con la app en producción; se revoca si pasa 6 meses sin usarse, si cambias la contraseña de Google o si revocas el acceso | el latido diario lo usa a diario |
+| API key de Resend, client secret de Google, secretos del admin | no caducan | — |
+
+**Pendiente con fecha: migrar las llaves de Supabase antes de fin de 2026.** Las llaves `anon` y
+`service_role` basadas en JWT quedan deprecadas; las reemplazan `sb_publishable_...` y
+`sb_secret_...`. Para este módulo es un cambio de una sola variable —`BOOK_SUPABASE_SERVICE_ROLE_KEY`
+pasa a contener la nueva secret key— sin tocar código, porque `@supabase/supabase-js` las acepta
+igual. Ambos tipos funcionan a la vez, así que se puede hacer con calma antes de que corten.
+
+
 ## Comandos
 
 ```bash
