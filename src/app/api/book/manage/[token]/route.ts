@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { assertBookable, BookingRejected } from '@/lib/book/service';
 import { getBookingByToken, getSettings, markCancelled, moveBooking, SlotTakenError } from '@/lib/book/store';
-import { deleteEvent, moveEvent } from '@/lib/book/google';
+import { deleteEvent, GoogleApiError, GoogleNotConnectedError, moveEvent } from '@/lib/book/google';
 import {
   sendGuestCancelled,
   sendGuestRescheduled,
@@ -95,6 +95,10 @@ export async function POST(req: NextRequest, { params }: Params) {
     if (e instanceof BookingRejected) {
       const status = e.reason === 'slot' ? 409 : e.reason === 'closed' ? 503 : 400;
       return NextResponse.json({ error: e.reason }, { status });
+    }
+    if (e instanceof GoogleApiError || e instanceof GoogleNotConnectedError) {
+      console.error('[book] manage POST: Google rechazó la petición', e);
+      return NextResponse.json({ error: 'calendar' }, { status: 503 });
     }
     console.error('[book] manage POST', e);
     return NextResponse.json({ error: 'server_error' }, { status: 500 });

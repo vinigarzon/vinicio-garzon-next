@@ -2,7 +2,7 @@ import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { assertBookable, BookingRejected, renderTemplate } from '@/lib/book/service';
 import { attachGoogleEvent, countRecentByIp, insertBooking, markCancelled, SlotTakenError } from '@/lib/book/store';
-import { createEvent, GoogleNotConnectedError } from '@/lib/book/google';
+import { createEvent, GoogleApiError, GoogleNotConnectedError } from '@/lib/book/google';
 import { sendGuestConfirmation, sendHostNewBooking } from '@/lib/book/email';
 import { isValidTimeZone } from '@/lib/book/time';
 import type { Lang } from '@/lib/book/i18n';
@@ -110,6 +110,12 @@ export async function POST(req: NextRequest) {
     if (e instanceof BookingRejected) {
       const status = e.reason === 'slot' ? 409 : e.reason === 'closed' ? 503 : 400;
       return NextResponse.json({ error: e.reason }, { status });
+    }
+    // Google falló al comprobar la disponibilidad (antes de crear nada).
+    // Mismo trato que en /availability: decirlo con claridad, no un 500 mudo.
+    if (e instanceof GoogleApiError || e instanceof GoogleNotConnectedError) {
+      console.error('[book] create booking: Google rechazó la comprobación de disponibilidad', e);
+      return NextResponse.json({ error: 'calendar' }, { status: 503 });
     }
     console.error('[book] create booking', e);
     return NextResponse.json({ error: 'server_error' }, { status: 500 });

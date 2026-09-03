@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { isConfigured, ping } from '@/lib/book/store';
-import { getAccessToken, GoogleApiError, GoogleNotConnectedError } from '@/lib/book/google';
+import { GoogleApiError, GoogleNotConnectedError, verifyAccess } from '@/lib/book/google';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -29,7 +29,8 @@ export async function GET() {
   }
 
   try {
-    await getAccessToken();
+    // Una llamada real a Google, no solo "¿tenemos un token guardado?".
+    await verifyAccess();
     result.google = 'ok';
   } catch (e) {
     if (e instanceof GoogleNotConnectedError) {
