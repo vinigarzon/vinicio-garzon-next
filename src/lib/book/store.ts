@@ -24,6 +24,13 @@ export function db(): SupabaseClient {
   if (!client) {
     client = createClient(bookEnv.supabaseUrl, bookEnv.supabaseKey, {
       auth: { persistSession: false, autoRefreshToken: false },
+      // Next 14 mete los GET de fetch en su Data Cache (y Netlify lo persiste
+      // entre invocaciones). Una lectura de la base jamás debe salir de ahí:
+      // el 11-sep-2026 un bloqueo recién creado no aparecía porque la lista
+      // de blackouts se sirvió cacheada. Siempre no-store.
+      global: {
+        fetch: (input, init) => fetch(input, { ...init, cache: 'no-store' }),
+      },
     });
   }
   return client;

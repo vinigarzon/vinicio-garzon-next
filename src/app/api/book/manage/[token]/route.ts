@@ -12,6 +12,7 @@ import type { Lang } from '@/lib/book/i18n';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 type Params = { params: { token: string } };
 

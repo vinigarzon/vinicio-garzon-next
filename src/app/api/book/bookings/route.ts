@@ -9,6 +9,7 @@ import type { Lang } from '@/lib/book/i18n';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const MAX_PER_IP_PER_DAY = 5;

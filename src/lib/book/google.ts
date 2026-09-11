@@ -110,6 +110,7 @@ async function rawApi(path: string, init: RequestInit & { token: string }) {
   const { token, ...rest } = init;
   const res = await fetch(`https://www.googleapis.com/calendar/v3${path}`, {
     ...rest,
+    cache: 'no-store',
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',

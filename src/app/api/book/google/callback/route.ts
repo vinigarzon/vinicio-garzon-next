@@ -7,6 +7,7 @@ import { getGoogleAccount, getSettings, saveGoogleAccount } from '@/lib/book/sto
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export async function GET(req: NextRequest) {
   const admin = `${bookEnv.siteUrl}/book/admin`;

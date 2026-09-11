@@ -12,6 +12,7 @@ import { bookEnv, missingEnv } from '@/lib/book/env';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export async function GET() {
   return NextResponse.json({ authenticated: isAdmin(), missingEnv: missingEnv() });

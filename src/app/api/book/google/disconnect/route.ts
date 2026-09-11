@@ -4,6 +4,7 @@ import { deleteGoogleAccount } from '@/lib/book/store';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export async function POST() {
   if (!isAdmin()) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
