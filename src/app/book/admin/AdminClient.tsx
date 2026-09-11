@@ -143,17 +143,28 @@ export default function AdminClient() {
   }
 
   async function addBlackout() {
-    if (!newBlackout.start_date) return;
+    if (!newBlackout.start_date) {
+      flash('Elige al menos la fecha de inicio');
+      return;
+    }
+    // Si el fin quedó antes que el inicio, los invertimos en vez de rechazar.
+    let start_date = newBlackout.start_date;
+    let end_date = newBlackout.end_date || newBlackout.start_date;
+    if (end_date < start_date) [start_date, end_date] = [end_date, start_date];
+
     const res = await fetch('/api/book/admin/blackouts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...newBlackout, end_date: newBlackout.end_date || newBlackout.start_date }),
+      body: JSON.stringify({ start_date, end_date, reason: newBlackout.reason }),
     });
     if (res.ok) {
       const d = await res.json();
       setConfig((c) => (c ? { ...c, blackouts: d.blackouts } : c));
       setNewBlackout({ start_date: '', end_date: '', reason: '' });
-      flash('Bloqueo agregado');
+      flash(start_date === end_date ? `Bloqueado ${start_date}` : `Bloqueado ${start_date} → ${end_date}`);
+    } else {
+      const err = await res.json().catch(() => ({}));
+      flash(err.error === 'invalid' ? 'Fechas inválidas: revisa inicio y fin' : 'No se pudo guardar el bloqueo');
     }
   }
 
@@ -403,25 +414,37 @@ export default function AdminClient() {
                 </Card>
 
                 <Card title="Fechas bloqueadas" subtitle="Vacaciones, viajes, días que no quieres ofrecer">
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    <input
-                      type="date"
-                      value={newBlackout.start_date}
-                      onChange={(e) => setNewBlackout({ ...newBlackout, start_date: e.target.value })}
-                      className={INPUT + ' w-auto'}
-                    />
-                    <input
-                      type="date"
-                      value={newBlackout.end_date}
-                      onChange={(e) => setNewBlackout({ ...newBlackout, end_date: e.target.value })}
-                      className={INPUT + ' w-auto'}
-                    />
-                    <input
-                      placeholder="Motivo (opcional)"
-                      value={newBlackout.reason}
-                      onChange={(e) => setNewBlackout({ ...newBlackout, reason: e.target.value })}
-                      className={INPUT + ' w-auto flex-1 min-w-[160px]'}
-                    />
+                  <div className="flex flex-wrap items-end gap-2 mb-5">
+                    <label className="block">
+                      <span className="block text-xs uppercase tracking-[0.18em] text-text-dim mb-2">Desde</span>
+                      <input
+                        type="date"
+                        value={newBlackout.start_date}
+                        onChange={(e) => setNewBlackout({ ...newBlackout, start_date: e.target.value })}
+                        className={INPUT + ' w-auto'}
+                      />
+                    </label>
+                    <label className="block">
+                      <span className="block text-xs uppercase tracking-[0.18em] text-text-dim mb-2">
+                        Hasta <span className="normal-case tracking-normal">(opcional, mismo día si se deja vacío)</span>
+                      </span>
+                      <input
+                        type="date"
+                        min={newBlackout.start_date || undefined}
+                        value={newBlackout.end_date}
+                        onChange={(e) => setNewBlackout({ ...newBlackout, end_date: e.target.value })}
+                        className={INPUT + ' w-auto'}
+                      />
+                    </label>
+                    <label className="block flex-1 min-w-[160px]">
+                      <span className="block text-xs uppercase tracking-[0.18em] text-text-dim mb-2">Motivo</span>
+                      <input
+                        placeholder="Vacaciones, viaje… (opcional)"
+                        value={newBlackout.reason}
+                        onChange={(e) => setNewBlackout({ ...newBlackout, reason: e.target.value })}
+                        className={INPUT}
+                      />
+                    </label>
                     <button onClick={addBlackout} className="btn-outline !py-3 !px-6">
                       Agregar
                     </button>

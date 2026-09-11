@@ -11,11 +11,13 @@ export async function POST(req: NextRequest) {
   if (!isAdmin()) return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   try {
     const body = await req.json();
-    const start = String(body.start_date ?? '');
-    const end = String(body.end_date ?? start);
-    if (!DATE_RE.test(start) || !DATE_RE.test(end) || end < start) {
+    let start = String(body.start_date ?? '');
+    let end = String(body.end_date || start);
+    if (!DATE_RE.test(start) || !DATE_RE.test(end)) {
       return NextResponse.json({ error: 'invalid' }, { status: 400 });
     }
+    // Rango al revés: lo normalizamos en vez de rechazarlo.
+    if (end < start) [start, end] = [end, start];
     await addBlackout(start, end, String(body.reason ?? '').slice(0, 200) || null);
     return NextResponse.json({ ok: true, blackouts: await getBlackouts() });
   } catch (e) {
