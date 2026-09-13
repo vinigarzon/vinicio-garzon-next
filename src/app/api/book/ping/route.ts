@@ -4,7 +4,6 @@ import { GoogleApiError, GoogleNotConnectedError, verifyAccess } from '@/lib/boo
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-export const fetchCache = 'force-no-store';
 
 /**
  * Toque de vida diario. Hace dos cosas:
@@ -46,8 +45,18 @@ export async function GET() {
         result.googleStatus = e.status;
         try {
           const parsed = JSON.parse(e.body);
-          result.googleError = parsed.error ?? null;
-          result.googleErrorDescription = parsed.error_description ?? null;
+          // Google tiene dos formatos de error y hay que aplanar los dos a texto:
+          //  - OAuth:  {"error":"invalid_grant","error_description":"..."}
+          //  - API:    {"error":{"code":401,"message":"...","status":"UNAUTHENTICATED"}}
+          // Si no se aplana, el correo de aviso muestra "[object Object]" y no sirve.
+          const err = parsed.error;
+          if (err && typeof err === 'object') {
+            result.googleError = err.status ?? err.code ?? 'api_error';
+            result.googleErrorDescription = err.message ?? null;
+          } else {
+            result.googleError = err ?? null;
+            result.googleErrorDescription = parsed.error_description ?? null;
+          }
         } catch {
           result.googleError = e.body.slice(0, 200);
         }
