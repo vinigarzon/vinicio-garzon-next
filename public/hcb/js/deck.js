@@ -158,6 +158,13 @@
 
   /* ---------- navigation ---------- */
   function frags(s) { return Array.from(s.querySelectorAll('.frag')); }
+  function syncTimeline(s) {
+    const tl = s.querySelector('.tl'); if (!tl) return;
+    const pts = tl.querySelectorAll('.pt'); const on = tl.querySelectorAll('.pt.on').length;
+    // bar reaches the dot of the last lit year (dots sit at the left edge of each column)
+    const pct = on === 0 ? 0 : ((on - 1) / pts.length) * 100 + (100 / pts.length) * 0.08;
+    tl.style.setProperty('--tl', pct + '%');
+  }
 
   function go(i, dir) {
     i = Math.max(0, Math.min(slides.length - 1, i));
@@ -175,6 +182,7 @@
     if (dir < 0) s.querySelectorAll('.iris').forEach(x => x.classList.add('on'));
     else s.querySelectorAll('.iris').forEach(x => x.classList.remove('on'));
     runCounters(s);
+    syncTimeline(s);
     loadVideo(s, true);
     paintProgress(cur);
     updateHUD();
@@ -192,6 +200,7 @@
         const breath = s.querySelector('#breath'); if (breath) breath.style.opacity = 0;
         setTimeout(() => f.querySelectorAll('.iris').forEach(x => x.classList.add('on')), 60);
       }
+      syncTimeline(s);
       return;
     }
     go(cur + 1, 1);
@@ -202,6 +211,7 @@
     if (shown.length) {
       const f = shown[shown.length - 1]; f.classList.remove('on');
       if (f.dataset.fx === 'shutter') { f.querySelectorAll('.iris').forEach(x => x.classList.remove('on')); const b = s.querySelector('#breath'); if (b) b.style.opacity = ''; }
+      syncTimeline(s);
       return;
     }
     go(cur - 1, -1);
