@@ -208,7 +208,7 @@
   }
 
   /* ---------- HUD + notes ---------- */
-  const NAMES = { marco: 'Marco', shun: 'Shun', andy: 'Andy' };
+  const NAMES = { marco: '1', shun: '2', andy: '3' };
   function updateHUD() {
     const s = slides[cur];
     const n = s.querySelector('aside.n');
