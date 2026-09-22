@@ -38,6 +38,19 @@ const nextConfig = {
         source: '/api/book/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
+      // Presentación de clase (ART 205, NCC) servida como estático desde public/hcb.
+      // Se comparte por link directo; fuera de buscadores.
+      {
+        source: '/hcb/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
+    ];
+  },
+
+  // /hcb -> public/hcb/index.html (rutas relativas de css/js/img intactas).
+  async redirects() {
+    return [
+      { source: '/hcb', destination: '/hcb/index.html', permanent: false },
     ];
   },
 };
