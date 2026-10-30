@@ -106,6 +106,17 @@
   .cta svg { width: 22px; height: 22px; flex: none; }
 
   .note { color: var(--muted); font-size: 14px; text-align: center; }
+  .inapp {
+    display: none;
+    border: 1px solid rgba(255,122,26,.45);
+    background: rgba(255,122,26,.08);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .inapp.show { display: block; }
+  .inapp b { color: var(--pumpkin); }
   .note strong { color: var(--ink); font-weight: 600; }
 
   footer {
@@ -122,10 +133,11 @@
         "photo head"
         "photo steps"
         "photo cta"
+        "photo inapp"
         "photo note"
         "photo ."
         "foot foot";
-      grid-template-rows: 1fr auto auto auto auto 1fr auto;
+      grid-template-rows: 1fr auto auto auto auto auto 1fr auto;
       align-content: center;
       min-height: 100svh;
       column-gap: 56px;
@@ -137,6 +149,7 @@
     .steps { grid-area: steps; }
     .cta   { grid-area: cta; width: auto; justify-self: start; padding: 14px 34px; }
     .note  { grid-area: note; text-align: left; align-self: start; }
+    .inapp { grid-area: inapp; }
     footer { grid-area: foot; }
   }
 </style>
@@ -159,7 +172,7 @@
     <p class="lede">I carved this one for a contest and every like on Facebook counts. It takes 5 seconds.</p>
   </header>
 
-  <a class="photo js-fb" href="https://www.facebook.com/share/19jombQuW2/" data-where="photo" aria-label="Open the photo on Facebook">
+  <a class="photo js-fb" href="https://www.facebook.com/photo/?fbid=1100716312958777&amp;set=a.172944225735995" data-where="photo" aria-label="Open the photo on Facebook">
     <img src="/pumpkin/pumpkin.jpg" width="900" height="1200" alt="Carved jack-o'-lantern wearing a black witch hat">
   </a>
 
@@ -168,10 +181,12 @@
     <li><b>2</b> Hit 👍 Like on the photo</li>
   </ol>
 
-  <a class="cta js-fb" href="https://www.facebook.com/share/19jombQuW2/" data-where="button">
+  <a class="cta js-fb" href="https://www.facebook.com/photo/?fbid=1100716312958777&amp;set=a.172944225735995" data-where="button">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21h3V9H2v12zm20-11a2 2 0 0 0-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6c-.4.4-.6.9-.6 1.4V19a2 2 0 0 0 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2z"/></svg>
     Like it on Facebook
   </a>
+
+  <p class="inapp" id="inapp">Coming from Instagram? Facebook may ask you to log in inside Instagram's browser. To like it faster, tap <b>•••</b> at the top, choose <b>Open in browser</b> (or <b>Open in system browser</b>) and tap the button again.</p>
 
   <p class="note">Voting closes <strong>Monday, Nov 2</strong>. Thank you! 🧡</p>
 
@@ -179,6 +194,15 @@
 </main>
 
 <script>
+  // Instagram's in-app browser has no Facebook session: show how to get out of it.
+  (function () {
+    var ua = navigator.userAgent || '';
+    if (/Instagram/i.test(ua)) {
+      document.getElementById('inapp').classList.add('show');
+      try { gtag('event', 'pumpkin_instagram_visit'); } catch (e) {}
+    }
+  })();
+
   // Count taps to Facebook in GA4 so we can compare ad clicks vs. people who actually went to like.
   document.querySelectorAll('.js-fb').forEach(function (a) {
     a.addEventListener('click', function () {
