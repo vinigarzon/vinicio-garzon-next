@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Help my pumpkin win 🎃</title>
+<meta name="description" content="I entered a Halloween pumpkin contest. Every like on Facebook counts. Voting closes Monday, Nov 2.">
+<meta name="theme-color" content="#0a0a0a">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.viniciogarzon.com/pumpkin/index.html">
+<meta property="og:title" content="Help my pumpkin win 🎃">
+<meta property="og:description" content="Halloween pumpkin contest. Every like counts. Takes 5 seconds.">
+<meta property="og:image" content="https://www.viniciogarzon.com/pumpkin/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎃</text></svg>">
+<link rel="preload" as="image" href="/pumpkin/pumpkin.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --ink: #ffffff;
+    --muted: #a3a3a3;
+    --line: #262626;
+    --pumpkin: #ff7a1a;
+    --pumpkin-hot: #ff9445;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    min-height: 100svh;
+    -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(60% 45% at 50% 38%, rgba(255,122,26,.18), transparent 70%),
+      var(--bg);
+  }
+  .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px 16px calc(28px + env(safe-area-inset-bottom));
+    display: grid;
+    gap: 18px;
+  }
+  .kicker {
+    color: var(--pumpkin);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .02em;
+  }
+  h1 {
+    font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+    font-size: clamp(30px, 8vw, 54px);
+    line-height: 1.02;
+    letter-spacing: -.02em;
+    margin-top: 4px;
+  }
+  .lede { color: var(--muted); margin-top: 10px; max-width: 34ch; }
+
+  .photo {
+    display: block;
+    justify-self: center;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 24px 60px -20px rgba(255,122,26,.45);
+    max-height: 50svh;
+    aspect-ratio: 3 / 4;
+  }
+  .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  .steps {
+    list-style: none; padding: 0;
+    display: flex; gap: 10px; flex-wrap: wrap;
+    color: var(--muted); font-size: 14px;
+  }
+  .steps li {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 12px;
+  }
+  .steps b { color: var(--ink); font-weight: 600; }
+
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    min-height: 58px;
+    padding: 14px 22px;
+    border-radius: 14px;
+    background: var(--pumpkin);
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px -10px rgba(255,122,26,.7);
+    transition: transform .12s ease, background .12s ease;
+  }
+  .cta:hover { background: var(--pumpkin-hot); }
+  .cta:active { transform: scale(.98); }
+  .cta svg { width: 22px; height: 22px; flex: none; }
+
+  .note { color: var(--muted); font-size: 14px; text-align: center; }
+  .note strong { color: var(--ink); font-weight: 600; }
+
+  footer {
+    margin-top: 6px; text-align: center; font-size: 12px; color: #5c5c5c;
+  }
+  footer a { color: inherit; text-decoration: none; }
+
+  /* Desktop: photo left, copy right */
+  @media (min-width: 820px) {
+    .wrap {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "photo ."
+        "photo head"
+        "photo steps"
+        "photo cta"
+        "photo note"
+        "photo ."
+        "foot foot";
+      grid-template-rows: 1fr auto auto auto auto 1fr auto;
+      align-content: center;
+      min-height: 100svh;
+      column-gap: 56px;
+      row-gap: 20px;
+      padding-top: 40px;
+    }
+    header { grid-area: head; }
+    .photo { grid-area: photo; max-height: 78svh; width: 100%; }
+    .steps { grid-area: steps; }
+    .cta   { grid-area: cta; width: auto; justify-self: start; padding: 14px 34px; }
+    .note  { grid-area: note; text-align: left; align-self: start; }
+    footer { grid-area: foot; }
+  }
+</style>
+
+<!-- Google Analytics 4 (same property as the rest of viniciogarzon.com) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDCBQXN246"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TDCBQXN246');
+</script>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <p class="kicker">Halloween pumpkin contest 🎃</p>
+    <h1>Help my pumpkin win</h1>
+    <p class="lede">I carved this one for a contest and every like on Facebook counts. It takes 5 seconds.</p>
+  </header>
+
+  <a class="photo js-fb" href="https://www.facebook.com/share/19jombQuW2/" data-where="photo" aria-label="Open the photo on Facebook">
+    <img src="/pumpkin/pumpkin.jpg" width="900" height="1200" alt="Carved jack-o'-lantern wearing a black witch hat">
+  </a>
+
+  <ol class="steps">
+    <li><b>1</b> Tap the button</li>
+    <li><b>2</b> Hit 👍 Like on the photo</li>
+  </ol>
+
+  <a class="cta js-fb" href="https://www.facebook.com/share/19jombQuW2/" data-where="button">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21h3V9H2v12zm20-11a2 2 0 0 0-2-2h-6.3l1-4.6v-.3c0-.4-.2-.8-.4-1.1L13.2 1 6.6 7.6c-.4.4-.6.9-.6 1.4V19a2 2 0 0 0 2 2h9c.8 0 1.5-.5 1.8-1.2l3-7.1c.1-.2.2-.5.2-.7v-2z"/></svg>
+    Like it on Facebook
+  </a>
+
+  <p class="note">Voting closes <strong>Monday, Nov 2</strong>. Thank you! 🧡</p>
+
+  <footer><a href="https://www.viniciogarzon.com">viniciogarzon.com</a></footer>
+</main>
+
+<script>
+  // Count taps to Facebook in GA4 so we can compare ad clicks vs. people who actually went to like.
+  document.querySelectorAll('.js-fb').forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { gtag('event', 'pumpkin_like_click', { where: a.dataset.where, transport_type: 'beacon' }); } catch (e) {}
+    });
+  });
+</script>
+</body>
+</html>

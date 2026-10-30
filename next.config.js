@@ -44,6 +44,12 @@ const nextConfig = {
         source: '/hcb/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
       },
+      // Página temporal del concurso de calabazas (oct-nov 2026), estática en public/pumpkin.
+      // Destino del anuncio de Meta; fuera de buscadores.
+      {
+        source: '/pumpkin/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
     ];
   },
 
@@ -51,6 +57,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: '/hcb', destination: '/hcb/index.html', permanent: false },
+      { source: '/pumpkin', destination: '/pumpkin/index.html', permanent: false },
     ];
   },
 };
